@@ -615,6 +615,15 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <div class="art-foot"><span>2026年6月3日</span><span class="art-rm">読む →</span></div>
           </div>
         </div>
+        <div class="art-card" data-cats="money,workholi" onclick="showPage('tax')">
+          <div class="art-thumb tm2" style="background:none;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&auto=format&fit=crop&q=80" alt="オーストラリアのタックスリターン" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="art-body">
+            <div class="art-tags"><span class="tag tm">お金・決済</span><span class="tag tw">ワーホリ</span></div>
+            <div class="art-title">オーストラリアのタックスリターン攻略ガイド【2026年版】</div>
+            <div class="art-exc">税務年度・申告期限・ワーホリと居住者の税率の違い・年収別の還付目安までまとめて解説。</div>
+            <div class="art-foot"><span>2026年6月5日</span><span class="art-rm">読む →</span></div>
+          </div>
+        </div>
       </div>
 
       <!-- 他のカテゴリ（カテゴリ選択時のみ表示） -->
@@ -1227,6 +1236,170 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
   </footer>
 </div>
 
+<!-- ======== オーストラリア タックスリターン ======== -->
+<div class="page" id="page-tax">
+  <main class="art-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <span class="link" onclick="showPage('top')">ホーム</span><span>›</span>
+        <span class="link" onclick="showPage('category','money')">お金・決済</span><span>›</span>
+        <span>オーストラリアのタックスリターン攻略</span>
+      </div>
+      <div class="art-layout">
+        <article>
+          <div class="art-hero-img" style="width:100%;height:280px;border-radius:var(--r-lg);overflow:hidden;margin-bottom:20px;">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&auto=format&fit=crop&q=80" alt="オーストラリアのタックスリターン（確定申告）のイメージ" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="art-header-tags">
+            <span class="tag tm">お金・決済</span>
+            <span class="tag tw">ワーホリ</span>
+          </div>
+          <h1 class="art-h1">オーストラリアのタックスリターン攻略ガイド｜ワーホリの税金・還付・居住者判定【2026年版】</h1>
+          <div class="art-meta">
+            <span>📅 2026年6月5日</span><span>🕐 約9分</span><span>✏️ TabiPack編集部</span>
+          </div>
+          <div class="art-body">
+            <p>オーストラリアでワーホリ中に働くと、給料から税金が天引き（源泉徴収）されています。その払いすぎた税金を取り戻す手続きが<strong>タックスリターン（Tax Return＝確定申告）</strong>です。やり方次第で<strong>数十万円相当の還付</strong>が戻ることも珍しくありません。</p>
+            <p>この記事では、税務年度・申告期限・ワーホリと居住者で異なる税率・年収別の還付の目安・申告のやり方まで、実体験をもとにわかりやすく解説します。</p>
+
+            <blockquote>⚠️ 本記事は一般的な情報のまとめです。税率や制度は変更されることがあり、居住者判定など個別の取扱いはATO（オーストラリア国税局）や登録税理士（registered tax agent）にご確認ください。最新の正確な情報は <a href="https://www.ato.gov.au/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">ATO公式サイト</a> で確認できます。</blockquote>
+
+            <h2 id="tr-what">タックスリターンとは？</h2>
+            <p>タックスリターンは、1年間の所得と納めた税金を申告し、<strong>払いすぎた税金を還付してもらう（または不足分を納める）</strong>手続きです。オーストラリアでは給料からその都度税金が天引きされていますが、多くのワーホリはこの天引き額が本来の税額より多くなっているため、申告すると差額が戻ってきます。</p>
+
+            <h2 id="tr-year">オーストラリアの税務年度（financial year）</h2>
+            <p>日本の年度（4月〜3月）と違い、オーストラリアの税務年度は<strong>7月1日〜翌年6月30日</strong>です。たとえば「2025–26年度」は<strong>2025年7月1日〜2026年6月30日</strong>を指します。この1年間の収入をまとめて、年度終了後に申告します。</p>
+
+            <h2 id="tr-deadline">タックスリターンの期限</h2>
+            <p>自分で申告する場合の期限は、税務年度終了後の<strong>10月31日</strong>です（例：2025–26年度＝2026年6月30日終了 → 期限は2026年10月31日）。</p>
+            <p>登録税理士（registered tax agent）に依頼する場合は<strong>期限が翌年まで延長</strong>されることがあります。ただし、10月31日までに税理士へ登録・依頼しておく必要があります。</p>
+
+            <h2 id="tr-whm">ワーホリの税率（Working Holiday Maker rates）</h2>
+            <p>ワーキングホリデービザ（subclass 417／462）で働く人には、原則「ワーホリ向け税率」が適用されます。日本の基礎控除のような非課税枠がなく、<strong>1ドル目から15%</strong>かかるのが特徴です。</p>
+            <table>
+              <thead><tr><th>課税所得（AUD）</th><th>税率</th></tr></thead>
+              <tbody>
+                <tr><td>$0 – $45,000</td><td><strong>15%</strong></td></tr>
+                <tr><td>$45,001 – $135,000</td><td>30%</td></tr>
+                <tr><td>$135,001 – $190,000</td><td>37%</td></tr>
+                <tr><td>$190,001 〜</td><td>45%</td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:13px;color:var(--t2);">※2024年7月1日以降の税率。ワーホリ向け税率には通常Medicare Levy（医療保険税）はかかりません。</p>
+
+            <h2 id="tr-resident">居住者扱いされた場合の税率</h2>
+            <p>一方、税務上の「居住者（resident for tax purposes）」と判定されると、<strong>年間18,200ドルまでが非課税</strong>になります。この非課税枠があるかどうかが、還付額に大きく影響します。</p>
+            <table>
+              <thead><tr><th>課税所得（AUD）</th><th>税率</th></tr></thead>
+              <tbody>
+                <tr><td>$0 – $18,200</td><td><strong>0%（非課税）</strong></td></tr>
+                <tr><td>$18,201 – $45,000</td><td>16%</td></tr>
+                <tr><td>$45,001 – $135,000</td><td>30%</td></tr>
+                <tr><td>$135,001 – $190,000</td><td>37%</td></tr>
+                <tr><td>$190,001 〜</td><td>45%</td></tr>
+              </tbody>
+            </table>
+            <p>日本はオーストラリアと租税条約を結んでおり、その<strong>無差別条項</strong>により、居住者と認められた日本人ワーホリは居住者税率（非課税枠を含む）の適用を受けられるケースがあります。ワーホリ税率で源泉徴収されていた分との差額が、申告によって還付される仕組みです。</p>
+            <p style="font-size:13px;color:var(--t2);">※居住者は本来Medicare Levy（2%）の対象ですが、日本はオーストラリアと相互医療協定がないため、Medicare対象外として<strong>Medicare Levyの免除</strong>を申請できる場合があります。</p>
+
+            <h2 id="tr-judge">居住者判定について（筆者の体験）</h2>
+            <p>「ワーホリ＝非居住者」と思われがちですが、実際は<strong>滞在の実態</strong>で判定されます。一般に、継続して半年（183日）以上滞在し、現地で生活・就労していれば、居住者と判定されるケースが多いです。</p>
+            <blockquote>💡 <strong>筆者の場合：</strong>1年のうち<strong>約10ヶ月オーストラリアに滞在</strong>し、シドニー→ケアンズ→メルボルンと<strong>3都市を引っ越し</strong>しましたが、それでも税務上は<strong>居住者として扱われました</strong>。引っ越しを繰り返しても、継続して現地で暮らし・働いていれば居住者と判定されうる、という一例です。</blockquote>
+            <p>ただし判定は個々の状況によります。滞在期間・住まい・仕事の状況などからATOが総合的に判断するため、不安な場合は税理士に相談すると確実です。</p>
+
+            <h2 id="tr-refund">年収別・還付額の目安（居住者判定の場合）</h2>
+            <p>ワーホリ税率で源泉徴収されていた人が居住者として再計算されると、非課税枠の分が還付されます。年収別のおおよその目安は次のとおりです。</p>
+            <table>
+              <thead><tr><th>年収（AUD）</th><th>ワーホリ税率での天引き</th><th>居住者として再計算</th><th>還付の目安</th></tr></thead>
+              <tbody>
+                <tr><td>$20,000</td><td>約$3,000</td><td>約$290</td><td><strong>約$2,700</strong></td></tr>
+                <tr><td>$30,000</td><td>約$4,500</td><td>約$1,890</td><td><strong>約$2,600</strong></td></tr>
+                <tr><td>$40,000</td><td>約$6,000</td><td>約$3,490</td><td><strong>約$2,500</strong></td></tr>
+                <tr><td>$50,000</td><td>約$8,250</td><td>約$5,790</td><td><strong>約$2,460</strong></td></tr>
+                <tr><td>$60,000</td><td>約$11,250</td><td>約$8,790</td><td><strong>約$2,460</strong></td></tr>
+              </tbody>
+            </table>
+            <p style="font-size:13px;color:var(--t2);">※Medicare Levy免除・他の所得や控除なし・2024–25年度税率での概算です。実際の還付額は、実際に天引きされた金額・控除（仕事関連の経費など）などにより変わります。</p>
+            <p>つまり、居住者判定を受けられれば<strong>年収にかかわらずおおむね2,400〜2,700ドル前後</strong>が戻る計算になります。仕事関連の経費などの控除があれば、さらに増えることもあります。</p>
+
+            <div style="background:var(--orange-p);border:1px solid var(--br);border-radius:var(--r-lg);padding:24px;margin:28px 0;">
+              <p style="font-weight:700;margin-bottom:8px;">💸 還付金の受け取りはWiseが便利</p>
+              <p style="font-size:14px;color:var(--t2);margin-bottom:14px;line-height:1.8;">還付金はオーストラリアの銀行口座（BSB＋口座番号）に振り込まれます。すでに帰国していて現地の銀行口座を解約してしまった場合でも、<strong>WiseのAUD受け取り口座</strong>を使えば還付金を受け取り、そのまま手数料を抑えて日本円で日本の口座へ送れます。</p>
+              <a class="btn btn-p" onclick="showPage('wise')" style="cursor:pointer;">Wiseの使い方を見る →</a>
+            </div>
+
+            <h2 id="tr-how">タックスリターンのやり方</h2>
+            <p>自分で申告する場合は、ATOのオンラインサービス「myTax」を使います。基本の流れは次のとおりです。</p>
+            <div class="step-box"><div class="step-num">1</div><div><p class="step-ttl">TFN（タックスファイルナンバー）を準備</p><p class="step-desc">就労開始時に取得しているはずの納税者番号です。給与明細やmyGovで確認できます。</p></div></div>
+            <div class="step-box"><div class="step-num">2</div><div><p class="step-ttl">myGovアカウントを作成し、ATOと連携</p><p class="step-desc">myGov（政府サービスの共通ID）を作成し、サービスとして「ATO」を追加・連携します。</p></div></div>
+            <div class="step-box"><div class="step-num">3</div><div><p class="step-ttl">Income statement（給与・源泉徴収額）を確認</p><p class="step-desc">雇用主がSTPで自動報告します。年度終了後（7月中旬以降）にステータスが「Tax ready」になれば確定です。</p></div></div>
+            <div class="step-box"><div class="step-num">4</div><div><p class="step-ttl">myTaxで申告内容を入力</p><p class="step-desc">居住者かどうか、控除（仕事関連の経費など）を入力します。給与情報の多くは自動で反映されます。</p></div></div>
+            <div class="step-box"><div class="step-num">5</div><div><p class="step-ttl">還付金の振込先口座を登録</p><p class="step-desc">オーストラリアの銀行口座（BSB＋口座番号）を登録します。WiseのAUD受け取り口座情報も利用できます。</p></div></div>
+            <div class="step-box"><div class="step-num">6</div><div><p class="step-ttl">提出（lodge）して還付を待つ</p><p class="step-desc">不備がなければ、通常2週間ほどで登録口座に還付金が振り込まれます。</p></div></div>
+
+            <p><strong>申告に必要なもの</strong></p>
+            <ul>
+              <li>TFN（タックスファイルナンバー）</li>
+              <li>myGovアカウント</li>
+              <li>パスポート・ビザ情報</li>
+              <li>Income statement（雇用主のSTP報告。myGovで確認）</li>
+              <li>振込先の銀行口座情報（BSB＋口座番号。Wiseも可）</li>
+              <li>仕事関連の領収書（控除に使う場合）</li>
+            </ul>
+
+            <h2 id="tr-faq">よくある質問</h2>
+            <div class="faq-item"><button class="faq-q">タックスリターンは必ずやる必要がありますか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">給料から税金が天引きされている人は、基本的に申告が必要です。多くの場合は払いすぎた税金が還付されるため、やらないと損になりがちです。</div></div></div>
+            <div class="faq-item"><button class="faq-q">帰国後でも申告できますか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">できます。myGov／ATOオンライン、または登録税理士を通じて海外からでも申告可能です。還付金はWiseなどのAUD口座でも受け取れます。</div></div></div>
+            <div class="faq-item"><button class="faq-q">スーパーアニュエーション（年金）も戻ってきますか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">ワーホリなどの一時滞在者は、出国後にDASP（Departing Australia Superannuation Payment）として年金を請求できます。ただしワーホリのDASP税率は65%と高めで、タックスリターンとは別の手続きになります。</div></div></div>
+            <div class="faq-item"><button class="faq-q">自分でやるのと税理士に頼むのはどちらが良いですか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">シンプルな内容ならmyTaxで自分でも十分可能です。居住者判定や控除に不安がある場合は、登録税理士（registered tax agent）に依頼すると安心です（手数料は翌年の控除対象になることもあります）。</div></div></div>
+
+            <p style="margin-top:44px;font-size:12px;color:var(--tm);border-top:1px solid var(--br);padding-top:14px;">最終更新：2026年6月 ／ ※税率・制度は変更される場合があります。本記事は税務アドバイスではなく一般的な情報提供です。最新かつ正確な情報はATO公式サイト・登録税理士にてご確認ください。</p>
+          </div>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sw">
+            <div class="sw-head">目次</div>
+            <ul class="toc-list">
+              <li><a onclick="scrollToId('tr-what')">タックスリターンとは？</a></li>
+              <li><a onclick="scrollToId('tr-year')">税務年度</a></li>
+              <li><a onclick="scrollToId('tr-deadline')">申告の期限</a></li>
+              <li><a onclick="scrollToId('tr-whm')">ワーホリの税率</a></li>
+              <li><a onclick="scrollToId('tr-resident')">居住者の税率</a></li>
+              <li><a onclick="scrollToId('tr-judge')">居住者判定（体験）</a></li>
+              <li><a onclick="scrollToId('tr-refund')">年収別の還付目安</a></li>
+              <li><a onclick="scrollToId('tr-how')">申告のやり方</a></li>
+              <li><a onclick="scrollToId('tr-faq')">よくある質問</a></li>
+            </ul>
+          </div>
+          <div class="sw">
+            <div class="sw-head">関連記事</div>
+            <div class="rel-item" onclick="showPage('wise')" style="cursor:pointer;"><div class="rel-thumb">💸</div><div><div class="rel-title">Wiseの使い方完全ガイド</div><div class="rel-date">2026年6月3日</div></div></div>
+            <div class="rel-item" onclick="showPage('article')" style="cursor:pointer;"><div class="rel-thumb">🇦🇺</div><div><div class="rel-title">ワーホリビザ申請手順【2026年版】</div><div class="rel-date">2026年6月3日</div></div></div>
+          </div>
+          <div style="background:var(--orange);border-radius:var(--r-lg);padding:22px;">
+            <p style="font-size:13px;font-weight:700;color:white;margin-bottom:6px;">📩 新着記事を受け取る</p>
+            <p style="font-size:12px;color:rgba(255,255,255,.8);margin-bottom:14px;">更新をお知らせします。</p>
+            <input type="email" placeholder="メールアドレス" style="width:100%;padding:9px 12px;border-radius:var(--r-sm);border:none;font-size:12px;margin-bottom:8px;">
+            <button style="width:100%;background:white;color:var(--orange);border:none;border-radius:99px;padding:9px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;">登録する</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
+        <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
+        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('gadget')">ガジェット10選</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
+    </div>
+  </footer>
+</div>
+
 <!-- ======== プライバシーポリシー ======== -->
 <div class="page" id="page-privacy">
   <main class="art-page">
@@ -1418,6 +1591,7 @@ var PAGE_URLS = {
   'article': 'articles/workholi-visa-australia',
   'wise':    'articles/wise-guide',
   'gadget':  'articles/gadget-10',
+  'tax':     'articles/tax-return-australia',
   'about':   'about',
   'privacy':  'privacy',
   'disclaimer':'disclaimer',
@@ -1438,6 +1612,7 @@ var PAGE_TITLES = {
   'article': 'オーストラリアのワーホリビザ申請手順を完全解説【2026年最新版】｜TabiPack',
   'wise':    'Wise（ワイズ）の使い方完全ガイド｜口座開設から海外送金まで【2026年版】｜TabiPack',
   'gadget':  '海外旅行・ワーホリに持っていくべきガジェット10選【実体験レビュー】｜TabiPack',
+  'tax':     'オーストラリアのタックスリターン攻略ガイド｜ワーホリの税金・還付・居住者判定【2026年版】｜TabiPack',
   'about':   '編集者について｜TabiPack',
   'privacy':  'プライバシーポリシー｜TabiPack',
   'disclaimer':'免責事項｜TabiPack',
@@ -1575,6 +1750,7 @@ function parseAndShowPage(path) {
   if(path === 'articles/workholi-visa-australia') { showPageWithoutHistory('article', null); return; }
   if(path === 'articles/wise-guide') { showPageWithoutHistory('wise', null); return; }
   if(path === 'articles/gadget-10') { showPageWithoutHistory('gadget', null); return; }
+  if(path === 'articles/tax-return-australia') { showPageWithoutHistory('tax', null); return; }
   if(path === 'privacy') { showPageWithoutHistory('privacy', null); return; }
   if(path === 'disclaimer') { showPageWithoutHistory('disclaimer', null); return; }
   if(path === 'contact') { showPageWithoutHistory('contact', null); return; }
@@ -1712,6 +1888,31 @@ var SEO_META = {
           {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://tabipack.com/"},
           {"@type": "ListItem", "position": 2, "name": "ガジェット", "item": "https://tabipack.com/category/gadget"},
           {"@type": "ListItem", "position": 3, "name": "ガジェット10選", "item": "https://tabipack.com/articles/gadget-10"}
+        ]
+      }
+    }
+  },
+  'tax': {
+    title: 'オーストラリアのタックスリターン攻略ガイド｜ワーホリの税金・還付・居住者判定【2026年版】｜TabiPack',
+    desc:  'オーストラリアのワーホリのタックスリターンを徹底解説。税務年度（7月〜6月）・申告期限（10月31日）・ワーホリ税率と居住者税率の違い・年収別の還付目安・Wiseでの還付金受け取りまで実体験ベースで紹介。',
+    url:   'https://tabipack.com/articles/tax-return-australia',
+    type:  'article',
+    ld: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "オーストラリアのタックスリターン攻略ガイド｜ワーホリの税金・還付・居住者判定【2026年版】",
+      "description": "オーストラリアのワーホリのタックスリターンを徹底解説。税務年度・申告期限・ワーホリ税率と居住者税率の違い・年収別の還付目安・Wiseでの還付金受け取りまで実体験ベースで紹介。",
+      "datePublished": "2026-06-05",
+      "dateModified": "2026-06-05",
+      "author": {"@type": "Person", "name": "TabiPack編集者", "url": "https://tabipack.com/about"},
+      "publisher": {"@type": "Organization", "name": "TabiPack", "url": "https://tabipack.com/"},
+      "mainEntityOfPage": "https://tabipack.com/articles/tax-return-australia",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://tabipack.com/"},
+          {"@type": "ListItem", "position": 2, "name": "お金・決済", "item": "https://tabipack.com/category/money"},
+          {"@type": "ListItem", "position": 3, "name": "オーストラリアのタックスリターン攻略", "item": "https://tabipack.com/articles/tax-return-australia"}
         ]
       }
     }
