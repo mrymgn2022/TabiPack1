@@ -169,6 +169,8 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 .filter-bar{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
 .filter-btn{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;padding:8px 18px;border-radius:99px;border:1px solid var(--brd);background:white;color:var(--t2);cursor:pointer;transition:all .15s}
 .filter-btn:hover,.filter-btn.active{background:var(--orange);color:white;border-color:var(--orange)}
+.cat-pill{display:inline-flex;align-items:center;font-size:13px;font-weight:600;padding:8px 18px;border-radius:99px;border:1px solid var(--brd);background:#fff;color:var(--t2);cursor:pointer;transition:all .15s}
+.cat-pill:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
 
 /* ARTICLE PAGE */
 .art-page{padding:48px 0 80px}
@@ -524,13 +526,13 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <li><a onclick="showPage('about')">編集者について</a></li>
             <li><a onclick="showPage('privacy')">プライバシーポリシー</a></li>
             <li><a onclick="showPage('disclaimer')">免責事項</a></li>
-            <li><a>お問い合わせ</a></li>
+            <li><a onclick="showPage('contact')">お問い合わせ</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 TabiPack. All rights reserved.</span>
-        <div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a>お問い合わせ</a></div>
+        <div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div>
       </div>
     </div>
   </footer>
@@ -541,8 +543,16 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
   <main style="padding:48px 0 80px;">
     <div class="container">
       <div class="breadcrumb">
-        <span class="link" onclick="showPage('top')">ホーム</span><span>›</span><span>カテゴリ一覧</span>
+        <span class="link" onclick="showPage('top')">ホーム</span><span>›</span><span id="cat-breadcrumb-current">カテゴリ一覧</span>
       </div>
+      <!-- カテゴリ選択時のヘッダー（メニュー/カードでカテゴリを選ぶと表示） -->
+      <div id="cat-head" style="display:none;margin-bottom:32px;">
+        <h1 id="cat-head-name" class="sec-title" style="margin-bottom:8px;"></h1>
+        <p id="cat-head-desc" style="color:var(--t2);font-size:14px;line-height:1.8;max-width:760px;"></p>
+      </div>
+
+      <!-- カテゴリ一覧トップ（ハブ）：カテゴリから探す -->
+      <div id="cat-hub">
       <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px;">
         <h1 class="sec-title">カテゴリから探す</h1>
       </div>
@@ -576,12 +586,6 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
       <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px;">
         <h2 class="sec-title">すべての記事</h2>
       </div>
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">すべて</button>
-        <button class="filter-btn" data-filter="workholi">✈ ワーホリ</button>
-        <button class="filter-btn" data-filter="travel">🗺 旅行</button>
-        <button class="filter-btn" data-filter="gadget">📱 ガジェット</button>
-        <button class="filter-btn" data-filter="money">💳 お金・決済</button>
       </div>
       <div class="art-grid" id="cat-art-grid">
         <div class="art-card" data-cats="workholi,money" onclick="showPage('article')">
@@ -612,6 +616,12 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           </div>
         </div>
       </div>
+
+      <!-- 他のカテゴリ（カテゴリ選択時のみ表示） -->
+      <div id="cat-other" style="display:none;margin-top:52px;padding-top:32px;border-top:1px solid var(--br);">
+        <h2 class="sec-title" style="font-size:18px;margin-bottom:16px;">ほかのカテゴリも見る</h2>
+        <div id="cat-other-links" style="display:flex;gap:10px;flex-wrap:wrap;"></div>
+      </div>
     </div>
   </main>
   <footer class="site-footer">
@@ -623,9 +633,9 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
         </div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
         <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a>Airaloレビュー</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
@@ -769,9 +779,9 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
         <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a>Airaloレビュー</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
@@ -875,9 +885,9 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
         <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a>Airaloレビュー</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
@@ -1061,9 +1071,9 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
         <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('gadget')">ガジェット10選</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
@@ -1210,9 +1220,9 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
         <div><div class="footer-logo" onclick="showPage('top',null,'/')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
         <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('gadget')">ガジェット10選</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about',null,'/about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about',null,'/about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
@@ -1278,9 +1288,9 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
       <div class="footer-grid">
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
@@ -1334,13 +1344,71 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
       <div class="footer-grid">
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
-        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a></div></div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
     </div>
   </footer>
 </div>
 
+
+<!-- ===== PAGE: CONTACT ===== -->
+<div class="page" id="page-contact">
+  <main class="art-page">
+    <div class="container">
+      <div class="breadcrumb">
+        <span class="link" onclick="showPage('top')">ホーム</span><span>›</span>
+        <span>お問い合わせ</span>
+      </div>
+      <div class="art-layout">
+        <article>
+          <h1 class="art-h1">お問い合わせ</h1>
+          <div class="art-meta"><span>📧 TabiPack編集部</span></div>
+          <div class="art-body">
+            <p>TabiPackをご覧いただきありがとうございます。記事へのご質問・ご感想、誤りのご指摘、取材・寄稿・メディア掲載のご依頼、広告・アフィリエイトに関するご相談などは、下記のメールアドレスまでお気軽にご連絡ください。</p>
+            <div style="background:var(--orange-p);border:1px solid var(--br);border-radius:var(--r-lg);padding:28px;text-align:center;margin:28px 0;">
+              <p style="font-size:13px;color:var(--t2);margin-bottom:8px;">メールでのお問い合わせ</p>
+              <p style="font-size:20px;font-weight:700;color:var(--orange-d);margin-bottom:18px;letter-spacing:.02em;">info@tabipack.com</p>
+              <a class="btn btn-p" href="mailto:info@tabipack.com?subject=TabiPackへのお問い合わせ">✉ メールを送る</a>
+            </div>
+            <h2>お問い合わせの前に</h2>
+            <ul>
+              <li>内容を確認のうえ順次返信いたします（通常3〜7日ほどお時間をいただく場合があります）。</li>
+              <li>ビザ申請・海外送金・税務など、個別具体的なご相談にはお答えできない場合があります。最新かつ正確な情報は、各公式機関の窓口にてご確認ください。</li>
+              <li>いただいた個人情報は、お問い合わせ対応の目的にのみ使用します。詳しくは<span class="link" style="color:var(--orange);cursor:pointer;" onclick="showPage('privacy')">プライバシーポリシー</span>をご覧ください。</li>
+            </ul>
+            <h2>よくいただくお問い合わせ</h2>
+            <ul>
+              <li>記事の内容・誤りのご指摘について</li>
+              <li>取材・寄稿・メディア掲載のご依頼</li>
+              <li>広告掲載・アフィリエイト・PR・タイアップのご相談</li>
+            </ul>
+          </div>
+        </article>
+        <aside class="sidebar">
+          <div class="sw">
+            <div class="sw-head">運営者情報</div>
+            <div style="padding:10px 6px;font-size:13px;color:var(--t2);line-height:2;">
+              サイト名：TabiPack<br>
+              運営者：TabiPack編集部<br>
+              メール：info@tabipack.com
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
+        <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
+        <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
+    </div>
+  </footer>
+</div>
 
 <script>
 // ページとURLのマッピング
@@ -1352,7 +1420,8 @@ var PAGE_URLS = {
   'gadget':  'articles/gadget-10',
   'about':   'about',
   'privacy':  'privacy',
-  'disclaimer':'disclaimer'
+  'disclaimer':'disclaimer',
+  'contact':  'contact'
 };
 
 var CAT_URLS = {
@@ -1371,7 +1440,8 @@ var PAGE_TITLES = {
   'gadget':  '海外旅行・ワーホリに持っていくべきガジェット10選【実体験レビュー】｜TabiPack',
   'about':   '編集者について｜TabiPack',
   'privacy':  'プライバシーポリシー｜TabiPack',
-  'disclaimer':'免責事項｜TabiPack'
+  'disclaimer':'免責事項｜TabiPack',
+  'contact':  'お問い合わせ｜TabiPack'
 };
 
 var CAT_TITLES = {
@@ -1380,6 +1450,60 @@ var CAT_TITLES = {
   'gadget':   'ガジェット記事一覧｜TabiPack',
   'money':    'お金・決済記事一覧｜TabiPack'
 };
+
+// カテゴリ表示名・説明（カテゴリ別ページのヘッダーに使用）
+var CAT_ORDER = ['workholi','travel','gadget','money'];
+var CAT_DISPLAY = {
+  'workholi': { name:'ワーホリ',     desc:'ビザ申請・渡航準備・現地での仕事や生活・お金の管理まで、ワーキングホリデーに役立つ情報を実体験をもとにまとめています。' },
+  'travel':   { name:'旅行',         desc:'国内・海外の旅行準備、持ち物、おすすめスポットなど、旅をもっと楽しむためのヒントを紹介します。' },
+  'gadget':   { name:'ガジェット',   desc:'eSIM・モバイルバッテリー・変換プラグなど、旅とワーホリで本当に役立ったガジェットを実体験レビューで紹介します。' },
+  'money':    { name:'お金・決済',   desc:'海外送金・クレジットカード・両替のコツ。Wiseなど手数料の安いサービスの使い方をわかりやすく解説します。' }
+};
+
+// カテゴリページの表示切り替え（ハブ⇄カテゴリ別）
+function applyCategoryView(filter){
+  var hub   = document.getElementById('cat-hub');
+  var head  = document.getElementById('cat-head');
+  var other = document.getElementById('cat-other');
+  var bc    = document.getElementById('cat-breadcrumb-current');
+  document.querySelectorAll('.site-nav a').forEach(function(b){ b.classList.remove('active'); });
+  if(filter && CAT_DISPLAY[filter]){
+    var d = CAT_DISPLAY[filter];
+    if(hub)  hub.style.display = 'none';
+    if(head){
+      head.style.display = '';
+      document.getElementById('cat-head-name').textContent = d.name + 'の記事';
+      document.getElementById('cat-head-desc').textContent = d.desc;
+    }
+    document.querySelectorAll('#cat-art-grid .art-card').forEach(function(card){
+      card.style.display = card.dataset.cats.split(',').includes(filter) ? '' : 'none';
+    });
+    if(other){
+      other.style.display = '';
+      var box = document.getElementById('cat-other-links');
+      box.innerHTML = '';
+      CAT_ORDER.forEach(function(c){
+        if(c === filter || !CAT_DISPLAY[c]) return;
+        var a = document.createElement('a');
+        a.className = 'cat-pill';
+        a.textContent = CAT_DISPLAY[c].name;
+        a.addEventListener('click', function(){ showPage('category', c); });
+        box.appendChild(a);
+      });
+    }
+    if(bc) bc.textContent = d.name;
+    var nbf = document.getElementById('nav-' + filter);
+    if(nbf) nbf.classList.add('active');
+  } else {
+    if(hub)  hub.style.display = '';
+    if(head) head.style.display = 'none';
+    document.querySelectorAll('#cat-art-grid .art-card').forEach(function(card){ card.style.display=''; });
+    if(other) other.style.display = 'none';
+    if(bc) bc.textContent = 'カテゴリ一覧';
+    var nbc = document.getElementById('nav-category');
+    if(nbc) nbc.classList.add('active');
+  }
+}
 
 function showPage(name, filter) {
   document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
@@ -1393,22 +1517,8 @@ function showPage(name, filter) {
   var nb = document.getElementById('nav-' + name);
   if(nb) nb.classList.add('active');
 
-  // カテゴリフィルター処理
-  if(name === 'category') {
-    if(filter) {
-      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-      var fb = document.querySelector('.filter-btn[data-filter="' + filter + '"]');
-      if(fb) fb.classList.add('active');
-      document.querySelectorAll('#cat-art-grid .art-card').forEach(function(card){
-        card.style.display = card.dataset.cats.split(',').includes(filter) ? '' : 'none';
-      });
-    } else {
-      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-      var allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-      if(allBtn) allBtn.classList.add('active');
-      document.querySelectorAll('#cat-art-grid .art-card').forEach(function(card){ card.style.display=''; });
-    }
-  }
+  // カテゴリ表示処理（ハブ⇄カテゴリ別）
+  if(name === 'category') { applyCategoryView(filter); }
 
   // URL & title 更新（History API）
   var url, title;
@@ -1453,20 +1563,7 @@ function showPageWithoutHistory(name, filter) {
   document.querySelectorAll('.site-nav a').forEach(function(b){ b.classList.remove('active'); });
   var nb = document.getElementById('nav-' + name);
   if(nb) nb.classList.add('active');
-  if(name === 'category') {
-    document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-    if(filter) {
-      var fb = document.querySelector('.filter-btn[data-filter="' + filter + '"]');
-      if(fb) fb.classList.add('active');
-      document.querySelectorAll('#cat-art-grid .art-card').forEach(function(card){
-        card.style.display = card.dataset.cats.split(',').includes(filter) ? '' : 'none';
-      });
-    } else {
-      var allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-      if(allBtn) allBtn.classList.add('active');
-      document.querySelectorAll('#cat-art-grid .art-card').forEach(function(card){ card.style.display=''; });
-    }
-  }
+  if(name === 'category') { applyCategoryView(filter); }
   updateSEOMeta(name, filter);
 }
 
@@ -1480,6 +1577,7 @@ function parseAndShowPage(path) {
   if(path === 'articles/gadget-10') { showPageWithoutHistory('gadget', null); return; }
   if(path === 'privacy') { showPageWithoutHistory('privacy', null); return; }
   if(path === 'disclaimer') { showPageWithoutHistory('disclaimer', null); return; }
+  if(path === 'contact') { showPageWithoutHistory('contact', null); return; }
   if(path === 'category') { showPageWithoutHistory('category', null); return; }
   if(path.startsWith('category/')) {
     var filter = path.replace('category/','');
@@ -1636,6 +1734,13 @@ var SEO_META = {
     title: '免責事項｜TabiPack',
     desc:  'TabiPackの免責事項。掲載情報の正確性・損害・アフィリエイトリンク・著作権について説明しています。',
     url:   'https://tabipack.com/disclaimer',
+    type:  'website',
+    ld:    null
+  },
+  'contact': {
+    title: 'お問い合わせ｜TabiPack',
+    desc:  'TabiPackへのお問い合わせ窓口。記事に関するご質問・ご感想、取材・寄稿・広告・アフィリエイトのご相談はメール（info@tabipack.com）までお気軽にどうぞ。',
+    url:   'https://tabipack.com/contact',
     type:  'website',
     ld:    null
   },
