@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>TabiPack（タビパック）</title>
+  <link>https://tabipack.com/</link>
+  <atom:link href="https://tabipack.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>ワーキングホリデー・海外旅行・ガジェット・お金（海外送金）の準備情報を、2年間のオーストラリアワーホリ実体験をもとに発信するメディアです。</description>
+  <language>ja</language>
+  <lastBuildDate>Sat, 06 Jun 2026 12:00:00 +0900</lastBuildDate>
+
+  <item>
+    <title>オーストラリアのファームジョブ体験談｜バナナファームでセカンドビザ取得</title>
+    <link>https://tabipack.com/articles/farm-job-australia</link>
+    <guid>https://tabipack.com/articles/farm-job-australia</guid>
+    <pubDate>Sat, 06 Jun 2026 12:00:00 +0900</pubDate>
+    <description>ケアンズ近郊のバナナファームで88日間。仕事内容・腱鞘炎・バックパッカー生活・語学力の重要性まで実体験で紹介。</description>
+  </item>
+  <item>
+    <title>オーストラリア周遊モデルコース｜シドニー・ケアンズ・メルボルンの観光と回り方</title>
+    <link>https://tabipack.com/articles/australia-travel-guide</link>
+    <guid>https://tabipack.com/articles/australia-travel-guide</guid>
+    <pubDate>Sat, 06 Jun 2026 11:00:00 +0900</pubDate>
+    <description>3都市の見どころと7〜9日間の周遊プラン、ベストシーズン・移動・支払いのコツを実体験で紹介。</description>
+  </item>
+  <item>
+    <title>eSIM・海外SIMの選び方｜オーストラリア・ワーホリのネット環境を最安で</title>
+    <link>https://tabipack.com/articles/esim-guide</link>
+    <guid>https://tabipack.com/articles/esim-guide</guid>
+    <pubDate>Sat, 06 Jun 2026 10:00:00 +0900</pubDate>
+    <description>eSIMの仕組み・メリット・容量や対応端末の選び方・設定手順・おすすめサービスをワーホリ/旅行向けに解説。</description>
+  </item>
+  <item>
+    <title>オーストラリアでの仕事の探し方｜ワーホリのジョブ探し・レジュメ・面接</title>
+    <link>https://tabipack.com/articles/find-job-australia</link>
+    <guid>https://tabipack.com/articles/find-job-australia</guid>
+    <pubDate>Sat, 06 Jun 2026 09:00:00 +0900</pubDate>
+    <description>仕事の種類・求人サイト・レジュメの書き方・面接やトライアル・英語のコツまで実体験で解説。</description>
+  </item>
+  <item>
+    <title>オーストラリアのスーパーアニュエーション完全ガイド｜ワーホリが帰国後に年金を引き出す方法</title>
+    <link>https://tabipack.com/articles/superannuation-guide</link>
+    <guid>https://tabipack.com/articles/superannuation-guide</guid>
+    <pubDate>Fri, 05 Jun 2026 11:00:00 +0900</pubDate>
+    <description>退職年金スーパーの仕組みと、ワーホリが帰国後にDASPで引き出す手順・税率・受け取り方法を解説。</description>
+  </item>
+  <item>
+    <title>オーストラリアのタックスリターン攻略ガイド｜ワーホリの税金・還付・居住者判定</title>
+    <link>https://tabipack.com/articles/tax-return-australia</link>
+    <guid>https://tabipack.com/articles/tax-return-australia</guid>
+    <pubDate>Fri, 05 Jun 2026 10:00:00 +0900</pubDate>
+    <description>税務年度・申告期限・ワーホリと居住者の税率の違い・年収別の還付目安・Wiseでの受け取りまで解説。</description>
+  </item>
+  <item>
+    <title>オーストラリアのワーホリビザ申請手順を完全解説【2026年最新版】</title>
+    <link>https://tabipack.com/articles/workholi-visa-australia</link>
+    <guid>https://tabipack.com/articles/workholi-visa-australia</guid>
+    <pubDate>Wed, 03 Jun 2026 12:00:00 +0900</pubDate>
+    <description>ビザ申請から渡航準備まで、実体験をもとにステップごとに解説。費用670AUD・申請手順・必要書類まで紹介。</description>
+  </item>
+  <item>
+    <title>Wise（ワイズ）の使い方完全ガイド｜口座開設から海外送金まで【2026年版】</title>
+    <link>https://tabipack.com/articles/wise-guide</link>
+    <guid>https://tabipack.com/articles/wise-guide</guid>
+    <pubDate>Wed, 03 Jun 2026 11:00:00 +0900</pubDate>
+    <description>Wiseの口座開設から海外送金・デビットカード活用まで徹底解説。銀行振込との手数料比較も実体験で紹介。</description>
+  </item>
+  <item>
+    <title>海外旅行・ワーホリに持っていくべきガジェット10選【実体験レビュー】</title>
+    <link>https://tabipack.com/articles/gadget-10</link>
+    <guid>https://tabipack.com/articles/gadget-10</guid>
+    <pubDate>Wed, 03 Jun 2026 10:00:00 +0900</pubDate>
+    <description>オーストラリアワーホリで実際に使ったガジェット10選を厳選紹介。eSIM・モバイルバッテリー・変換プラグなど。</description>
+  </item>
+</channel>
+</rss>
