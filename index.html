@@ -71,6 +71,19 @@
 }
 </script>
 
+<!-- 構造化データ: FAQPage（ブランド説明・「旅パック」との区別） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"「タビパック」とはどんなサイトですか？","acceptedAnswer":{"@type":"Answer","text":"TabiPack（タビパック）は、ワーキングホリデー・海外旅行・ガジェット・お金（海外送金）の準備情報を、オーストラリアでの2年間のワーホリ実体験をもとに発信する個人運営のメディアです。"}},
+    {"@type":"Question","name":"「タビパック」は「旅パック」と同じですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。タビパック（TabiPack）は当サイトの名称（ブランド名）です。一般的な旅行パック（パッケージツアー）を指す『旅パック』とは別物で、当サイトはツアー販売ではなく、旅・ワーホリの準備情報を発信するメディアです。"}},
+    {"@type":"Question","name":"TabiPack（タビパック）はどんな情報を発信していますか？","acceptedAnswer":{"@type":"Answer","text":"ワーホリビザの申請手順、海外送金（Wise）、eSIMの比較、海外旅行のガジェット、現地での仕事探し、タックスリターンやスーパーアニュエーションなど、渡航前後に役立つ実用情報を扱っています。"}}
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -198,6 +211,8 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 /* ARTICLE PAGE */
 .art-page{padding:48px 0 80px}
 .art-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+.art-layout>article{min-width:0}
+.toc-mobile{display:none}
 .art-header-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
 .art-h1{font-size:clamp(24px,4vw,34px);font-weight:800;line-height:1.3;letter-spacing:-.02em;color:var(--black);margin-bottom:18px}
 .art-meta{display:flex;align-items:center;gap:20px;font-size:13px;color:var(--tm);padding-bottom:22px;border-bottom:1px solid var(--br);margin-bottom:8px}
@@ -354,6 +369,8 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
   .hero-inner{grid-template-columns:1fr}
   .art-layout{grid-template-columns:1fr}
   .sidebar{position:static}
+  .toc-mobile{display:block;margin:18px 0 26px}
+  .sw-toc-orig{display:none}
   .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
   .about-hero-inner{grid-template-columns:1fr;text-align:center}
   .about-avatar{margin:0 auto}
@@ -787,7 +804,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <ul>
               <li><strong>対象年齢：</strong>申請時に18〜30歳（日本国籍）</li>
               <li><strong>滞在期間：</strong>最長12ヶ月（農業・地方就労で最大3年まで延長可能）</li>
-              <li><strong>就労制限：</strong>同一雇用主のもとで最長6ヶ月まで</li>
+              <li><strong>就労制限：</strong>原則、同一雇用主のもとで最長6ヶ月まで（2024年1月以降、農畜産・ホスピタリティ／観光・医療介護などの分野や、勤務地が変わる場合などは6ヶ月を超えて働ける例外あり）</li>
               <li><strong>ビザ費用：</strong>670 AUD（2026年時点）</li>
               <li><strong>申請方法：</strong>オンライン完結（大使館来訪不要）</li>
             </ul>
@@ -797,11 +814,12 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
               <thead><tr><th>国</th><th>年齢上限</th><th>滞在期間</th><th>費用目安</th><th>特徴</th></tr></thead>
               <tbody>
                 <tr><td><strong>オーストラリア</strong></td><td>30歳</td><td>最長3年</td><td>約670 AUD</td><td>セカンドビザあり・英語圏</td></tr>
-                <tr><td>カナダ</td><td>30歳</td><td>最長2年</td><td>約265 CAD</td><td>都市部の求人が豊富</td></tr>
-                <tr><td>ニュージーランド</td><td>30歳</td><td>最長3年</td><td>約208 NZD</td><td>自然豊か・物価低め</td></tr>
-                <tr><td>イギリス</td><td>30歳</td><td>最長2年</td><td>約298 GBP</td><td>欧州へのアクセスが良い</td></tr>
+                <tr><td>カナダ</td><td>30歳</td><td>最長12ヶ月</td><td>約360 CAD</td><td>都市部の求人が豊富</td></tr>
+                <tr><td>ニュージーランド</td><td>30歳</td><td>最長12ヶ月</td><td>約455 NZD</td><td>自然豊か・物価低め</td></tr>
+                <tr><td>イギリス</td><td>30歳</td><td>最長2年</td><td>約319 GBP</td><td>欧州へのアクセスが良い</td></tr>
               </tbody>
             </table>
+            <p style="font-size:13px;color:var(--t2);">※費用・期間は2026年時点の目安です。国籍・申請区分・時期により異なるため、最新は各国の公式移民サイトでご確認ください（オーストラリアはセカンド／サードビザで最長3年）。</p>
 
             <h2 id="steps">ビザ申請の手順</h2>
             <div class="step-box"><div class="step-num">1</div><div><p class="step-ttl">申請資格を確認する</p><p class="step-desc">申請時に18〜30歳、有効なパスポート、5,000 AUD以上の資金があること。過去にワーホリビザを使用していないことを確認しましょう。</p></div></div>
@@ -829,22 +847,24 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 
             <h2 id="esim">渡航前に準備②：eSIM（TORA eSIM）</h2>
             <p>オーストラリアに到着してすぐネットが使えないと物件探しや移動で困ります。<strong>事前にeSIMを設定しておくと到着直後から使えて安心</strong>です。</p>
-            <div class="aff-box">
-              <div class="aff-head"><div class="aff-icon">📱</div><div><div class="aff-svc">eSIMサービス</div><div class="aff-name">TORA eSIM</div></div></div>
-              <ul class="aff-pts">
-                <li>現地SIM・ポケットWi-Fi不要。スマホ1台で通信できる</li>
-                <li>出発前にオンラインで購入、到着後すぐ使える</li>
-                <li>世界の幅広い地域に対応</li>
-                <li>0.5GB〜無制限まで、短期〜長期滞在に合わせて選べる</li>
-                <li>料金プランが分かりやすい</li>
-              </ul>
-              <a class="aff-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener" style="display:block;text-align:center;text-decoration:none;">TORA eSIM 公式サイトへ →</a>
-              <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" alt="">
-            </div>
-            <!-- TORA eSIM バナー -->
-            <div style="text-align:center;margin:24px 0;">
-              <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="海外eSIM TORA eSIM" src="https://www24.a8.net/svt/bgt?aid=260606739151&wid=001&eno=01&mid=s00000026367001004000&mc=1" style="max-width:100%;height:auto;"></a>
-              <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" alt="">
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="TORA eSIM" src="https://www24.a8.net/svt/bgt?aid=260606739151&wid=001&eno=01&mid=s00000026367001004000&mc=1" loading="lazy" style="max-width:100%;height:auto;"></a>
+                <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">到着後すぐ使える</span>
+                <p class="esim-card-name">TORA eSIM</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>480円〜（隠れコストなし）</td></tr>
+                  <tr><th>対応エリア</th><td>世界中の地域</td></tr>
+                  <tr><th>データ容量</th><td>0.5GB〜無制限</td></tr>
+                  <tr><th>受け取り</th><td>出発前にオンライン購入→到着後すぐ</td></tr>
+                  <tr><th>こんな人に</th><td>ワーホリの渡航準備に</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">現地SIMカードやポケットWi-Fiが不要で、出発前にオンラインで購入しておけば到着直後から使えます。0.5GBから無制限まで幅広いプランがあり、短期から長期滞在まで対応。料金が明確で隠れたコストがないのも安心です。</p>
+                <a class="esim-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">TORA eSIM 公式サイトを見る →</a>
+              </div>
             </div>
 
             <h2 id="checklist">出発前チェックリスト</h2>
@@ -934,6 +954,19 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           <p class="about-intro">会社員生活にピリオドを打ち、2年間のオーストラリアワーキングホリデーへ。シドニー・ケアンズ・メルボルンを拠点に、現地の文化・仕事・旅を体当たりで経験。帰国後は実体験をもとに旅の準備から現地情報まで発信しています。</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section style="padding:56px 0 0;">
+    <div class="container" style="max-width:880px;">
+      <div class="stl">TabiPack（タビパック）とは？</div>
+      <p style="font-size:15px;color:var(--t2);line-height:1.95;margin-top:16px;"><strong>TabiPack（タビパック）</strong>は、ワーキングホリデー・海外旅行・国内旅行の準備に役立つ情報を、<strong>2年間のオーストラリアワーホリ実体験</strong>をもとに発信するメディアです。ビザ申請・お金（海外送金）・eSIM・ガジェット・仕事探し・タックスリターンなど、これから旅立つ人が知っておきたいことを、実体験ベースでわかりやすくまとめています。</p>
+      <p style="font-size:14px;color:var(--t2);line-height:1.95;">サイト名の「タビパック」は、<strong>「旅（タビ）」</strong>に必要なものを<strong>「パック（Pack＝荷づくり・ひとまとめ）」</strong>するように、旅の準備をまるごとサポートしたいという思いから名付けました。</p>
+
+      <div class="stl" style="margin-top:40px;">よくある質問（タビパックについて）</div>
+      <div class="faq-item"><button class="faq-q">「タビパック」とはどんなサイトですか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">TabiPack（タビパック）は、ワーホリ・海外旅行・ガジェット・お金（海外送金）の準備情報を、オーストラリアでの2年間のワーホリ実体験をもとに発信する個人運営のメディアです。</div></div></div>
+      <div class="faq-item"><button class="faq-q">「タビパック」は「旅パック」と同じですか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">いいえ。「タビパック（TabiPack）」は当サイトの名称（ブランド名）です。一般的な「旅行パック（パッケージツアー）」を指す『旅パック』とは別物で、当サイトはツアー販売ではなく、旅・ワーホリの準備情報を発信するメディアです。</div></div></div>
+      <div class="faq-item"><button class="faq-q">どんな情報を発信していますか？<span class="faq-tog">＋</span></button><div class="faq-ans"><div class="faq-ans-inner">ワーホリビザの申請手順、海外送金（Wise）、eSIMの比較、海外旅行のガジェット、現地での仕事探し、タックスリターンやスーパーアニュエーションなど、渡航前後に役立つ実用情報を扱っています。</div></div></div>
     </div>
   </section>
 
@@ -1050,17 +1083,24 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <h2 id="g1">01. eSIM（TORA eSIM）</h2>
             <p>現地に着いた瞬間からネットにつながれる安心感は何物にも代えられません。空港でSIMカードを探す手間がなく、オーストラリアでもアジア旅行でも渡航前にアプリで設定完了。複数の国を旅するときも、スマホ1台で通信をまかなえるのが便利です。</p>
             <p>eSIMサービスはいくつかありますが、ここでは <strong>TORA eSIM</strong> を紹介します。現地SIMカードやポケットWi-Fiを用意しなくても、eSIM対応スマホがあれば、出発前にオンラインで購入して到着後すぐに使えます。0.5GBから無制限まで幅広いプランがあるので、短期旅行から長期滞在まで選びやすいのが特徴です。</p>
-            <div class="aff-box">
-              <div class="aff-head"><div class="aff-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F26419" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><div class="aff-svc">eSIMサービス</div><div class="aff-name">TORA eSIM</div></div></div>
-              <ul class="aff-pts">
-                <li>現地SIM・ポケットWi-Fi不要。スマホ1台で通信できる</li>
-                <li>出発前にオンラインで購入、到着後すぐ使える（空港での購入・設定が不要）</li>
-                <li>世界の幅広い地域に対応</li>
-                <li>0.5GB〜無制限まで、短期旅行から長期滞在まで選べるプラン</li>
-                <li>料金プランが分かりやすい</li>
-              </ul>
-              <a class="aff-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener" style="display:block;text-align:center;text-decoration:none;">TORA eSIM 公式サイトへ →</a>
-              <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" alt="">
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="TORA eSIM" src="https://www24.a8.net/svt/bgt?aid=260606739151&wid=001&eno=01&mid=s00000026367001004000&mc=1" loading="lazy" style="max-width:100%;height:auto;"></a>
+                <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">到着後すぐ使える</span>
+                <p class="esim-card-name">TORA eSIM</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>480円〜（隠れコストなし）</td></tr>
+                  <tr><th>対応エリア</th><td>世界中の地域</td></tr>
+                  <tr><th>データ容量</th><td>0.5GB〜無制限</td></tr>
+                  <tr><th>受け取り</th><td>出発前にオンライン購入→到着後すぐ</td></tr>
+                  <tr><th>こんな人に</th><td>短期旅行〜長期滞在まで幅広く</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">現地SIMカードやポケットWi-Fiが不要で、出発前にオンラインで購入しておけば到着後すぐに使えます。0.5GBから無制限まで幅広いプランがあり、短期旅行から長期滞在まで対応。料金が明確で隠れたコストがないのも安心です。</p>
+                <a class="esim-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">TORA eSIM 公式サイトを見る →</a>
+              </div>
             </div>
 
             <h2 id="g2">02. Wise デビットカード</h2>
@@ -1089,12 +1129,12 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             </div>
 
             <h2 id="g4">04. 変換プラグ（全世界対応）</h2>
-            <p>オーストラリアのコンセントは日本と異なるO型（斜め2穴）。知らずに行くと現地でバタバタします。全世界対応のユニバーサルプラグを1つ持っておけば、どの国でも迷わず使えます。USB-A・USB-Cポート付きのものを選ぶとさらに便利。</p>
+            <p>オーストラリアのコンセントは日本と異なるO型（斜め2穴）。知らずに行くと現地で慌てがちです。全世界対応のユニバーサルプラグを1つ持っておけば、どの国でも迷わず使えます。USB-A・USB-Cポート付きのものを選ぶとさらに便利。</p>
 
             <h2 id="g5">05. ノイズキャンセリングイヤホン</h2>
-            <p>長距離フライトや夜行バスでの睡眠の質が劇的に変わります。ワーホリ中は語学学校の自習にも使えて重宝しました。Sony WF-1000XM5やApple AirPods Proが定番ですが、予算に応じてAnkerのSoundcore Liberty 4 NCもコスパが高くおすすめです。</p>
+            <p>機内や夜行バスの騒音をしっかり抑えてくれるので、移動中でも休息や集中がしやすくなります。ワーホリ中は語学学校の自習にも使えて重宝しました。Sony WF-1000XM5やApple AirPods Proが定番ですが、予算に応じてAnkerのSoundcore Liberty 4 NCもコスパが高くおすすめです。</p>
 
-            <h2 id="g6">06. エポスカード（海外旅行保険が超手厚い）</h2>
+            <h2 id="g6">06. エポスカード（海外旅行保険が手厚い）</h2>
             <p>海外旅行・ワーホリで見落としがちなのがクレジットカードの選択です。エポスカードは<strong>年会費無料で海外旅行傷害保険が付帯</strong>（利用付帯：旅行交通費などをカードで支払うと適用）という点が魅力。旅行中のケガ・病気・携行品の損害などをカバーしてくれます。ワーホリ中に現地で病院にかかったとき、このカードの保険に本当に助けられました。</p>
             <div class="aff-box">
               <div class="aff-head"><div class="aff-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F26419" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><div class="aff-svc">クレジットカード</div><div class="aff-name">エポスカード</div></div></div>
@@ -1105,6 +1145,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                 <li>携行品損害・賠償責任もカバー</li>
                 <li>最短即日発行可能・全国のマルイで受け取れる</li>
               </ul>
+              <a class="aff-btn" href="https://www.eposcard.co.jp/" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none;">エポスカード公式サイトへ →</a>
             </div>
 
             <h2 id="g7">07. ネックピロー（長距離移動の必需品）</h2>
@@ -1141,12 +1182,12 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                 </ul>
               </div>
             </div>
-            <p style="font-size:14px;color:var(--t2);line-height:1.8;">ワーホリ中のように長期滞在＆各地を移動するスタイルには、スーツケース1つ＋デイパック1つの組み合わせが最強です。拠点が決まったら大きい荷物は置いて、デイパックだけで動けるのが便利。</p>
+            <p style="font-size:14px;color:var(--t2);line-height:1.8;">ワーホリ中のように長期滞在＆各地を移動するスタイルには、スーツケース1つ＋デイパック1つの組み合わせが最も使いやすいです。拠点が決まったら大きい荷物は置いて、デイパックだけで動けるのが便利。</p>
 
             <h2 id="g9">09. 南京錠（TSAロック対応）</h2>
             <p>ホステルやゲストハウスのロッカーに必須。TSAロック対応のものを選べばアメリカへの渡航時も安心。ダイヤル式なら鍵を無くす心配がなく、旅行中のストレスが減ります。価格は1,000〜2,000円程度と安価なので複数持っておくと便利です。</p>
 
-            <h2 id="g10">10. ポータブル充電器内蔵スーツケース（またはGPSトラッカー）</h2>
+            <h2 id="g10">10. スマートタグ（AirTagなどのGPSトラッカー）</h2>
             <p>長期旅行・ワーホリには、スーツケースにAirTagや小型GPSトラッカーを忍ばせておくのが安心です。ロストバゲージ時に荷物の場所を特定できます。Apple AirTagはコンパクトで電池持ちも良く、iPhoneユーザーにはベストな選択です。</p>
 
             <blockquote>💡 <strong>まとめ：</strong>全部を一気に揃える必要はありません。まずeSIM・Wiseカード・モバイルバッテリー・変換プラグの4点から準備すれば、海外でのトラブルの大半は防げます。</blockquote>
@@ -1189,7 +1230,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
               <li><a onclick="scrollToId('g7')">07. ネックピロー</a></li>
               <li><a onclick="scrollToId('g8')">08. スーツケース＆バックパック</a></li>
               <li><a onclick="scrollToId('g9')">09. 南京錠</a></li>
-              <li><a onclick="scrollToId('g10')">10. GPSトラッカー</a></li>
+              <li><a onclick="scrollToId('g10')">10. スマートタグ</a></li>
               <li><a onclick="scrollToId('checklist2')">チェックリスト</a></li>
             </ul>
           </div>
@@ -1248,7 +1289,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           </div>
           <div class="art-body">
             <p>海外送金といえば銀行振込が一般的ですが、手数料が1回あたり2,000〜5,000円かかり、着金まで数日かかることも珍しくありません。そこでおすすめしたいのが<strong>Wise（ワイズ）</strong>です。</p>
-            <p>オーストラリアでのワーホリ中、日本から生活費を送ってもらったり、給料を日本に戻したりする際に毎回使っていました。手数料の安さと着金の速さは、一度使うと他には戻れないレベルです。この記事ではWiseの特徴から口座開設手順、実際の送金方法まで丁寧に解説します。</p>
+            <p>筆者もオーストラリアでのワーホリ中、日本から生活費を送ってもらったり、給料を日本に戻したりする際に毎回使っていました。手数料の安さと着金の速さは、一度使うと手放せないほどです。この記事ではWiseの特徴から口座開設手順、実際の送金方法まで丁寧に解説します。</p>
 
             <h2 id="w-what">Wise（ワイズ）とは？</h2>
             <p>Wiseは2011年にイギリスで創業した国際送金・多通貨口座サービスです。日本でも2016年から正式サービスを開始しており、現在は世界160カ国以上で利用されています。</p>
@@ -1293,7 +1334,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <h2 id="w-debit">Wiseデビットカードの活用法</h2>
             <p>Wiseのデビットカードは旅行・ワーホリ中の強い味方です。具体的な使い方をまとめます。</p>
             <ul>
-              <li><strong>現地ATMでの引き出し：</strong>月2回・合計50,000円相当まで手数料無料。それ以上は1.75%の手数料がかかります。</li>
+              <li><strong>現地ATMでの引き出し：</strong>月2回・合計30,000円相当まで手数料無料。回数や金額を超えると手数料（超過分は1.75%など）がかかります。</li>
               <li><strong>現地での支払い：</strong>AUDを口座に持っていれば、そのままAUDで支払えます。両替不要でレートも最良水準です。</li>
               <li><strong>ネットショッピング：</strong>VISA加盟のオンラインショップで使えます。現地のAmazon（amazon.com.au）での買い物にも便利です。</li>
             </ul>
@@ -1398,7 +1439,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <span>📅 2026年6月5日</span><span>🕐 約9分</span><span>✏️ TabiPack編集部</span>
           </div>
           <div class="art-body">
-            <p>オーストラリアでワーホリ中に働くと、給料から税金が天引き（源泉徴収）されています。その払いすぎた税金を取り戻す手続きが<strong>タックスリターン（Tax Return＝確定申告）</strong>です。やり方次第で<strong>数十万円相当の還付</strong>が戻ることも珍しくありません。</p>
+            <p>オーストラリアでワーホリ中に働くと、給料から税金が天引き（源泉徴収）されています。その払いすぎた税金を取り戻す手続きが<strong>タックスリターン（Tax Return＝確定申告）</strong>です。やり方次第で<strong>数十万円相当が還付される</strong>ことも珍しくありません。</p>
             <p>この記事では、税務年度・申告期限・ワーホリと居住者で異なる税率・年収別の還付の目安・申告のやり方まで、実体験をもとにわかりやすく解説します。</p>
 
             <blockquote>⚠️ 本記事は一般的な情報のまとめです。税率や制度は変更されることがあり、居住者判定など個別の取扱いはATO（オーストラリア国税局）や登録税理士（registered tax agent）にご確認ください。最新の正確な情報は <a href="https://www.ato.gov.au/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">ATO公式サイト</a> で確認できます。</blockquote>
@@ -1712,7 +1753,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 
             <h2 id="fa-why">なぜファームジョブ？（セカンドビザの88日間）</h2>
             <p>オーストラリアのワーホリは、一定の条件を満たす地域・職種で<strong>88日間（約3ヶ月）働くと、2年目の「セカンドビザ」</strong>を申請できます。その対象になりやすいのが、地方での農業（ファームジョブ）です。筆者もセカンドビザ取得のために、ファームで働くことを選びました。</p>
-            <blockquote>💡 <strong>豆知識：「88日」は実働日数ではなく“期間”で数えられる</strong><br>フルタイム（週およそ35時間以上）で<strong>同じ雇用主のもとで継続して働く</strong>場合、週末や休みの日も含めてカウントできます。つまり<strong>週5日働けば、その週は7日分</strong>として数えられ、継続フルタイムなら約3ヶ月（12〜13週）で88日に到達します。<br><span style="font-size:13px;color:var(--t2);">※歩合（piece rate）の場合は、署名済みの歩合契約があれば「働いて給料が発生した日」がカウント対象。パートやカジュアルで間が空くと“実働日のみ”の換算になり、達成まで時間がかかります。条件は変わるため、必ず<a href="https://immi.homeaffairs.gov.au/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Home Affairs公式</a>で最新を確認してください。</span></blockquote>
+            <blockquote>💡 <strong>豆知識：「88日」は実働日数ではなく“期間”で数えられる</strong><br>フルタイム（週38時間程度）で<strong>同じ雇用主のもとで継続して働く</strong>場合、週末や休みの日も含めてカウントできます。つまり<strong>週5日働けば、その週は7日分</strong>として数えられ、継続フルタイムなら約3ヶ月（12〜13週）で88日に到達します。<br><span style="font-size:13px;color:var(--t2);">※歩合（piece rate）の場合は、署名済みの歩合契約があれば「働いて給料が発生した日」がカウント対象。パートやカジュアルで間が空くと“実働日のみ”の換算になり、達成まで時間がかかります。条件は変わるため、必ず<a href="https://immi.homeaffairs.gov.au/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);">Home Affairs公式</a>で最新を確認してください。</span></blockquote>
 
             <h2 id="fa-where">働いた場所とシーズン</h2>
             <p>筆者が選んだのは<strong>ケアンズ近郊のバナナファーム</strong>。バナナは一般的に「<strong>シーズン</strong>」と呼ばれる<strong>11月ごろから約4ヶ月間</strong>が忙しく、仕事を見つけやすい時期でした。作物ごとに繁忙期は異なるので、行きたい地域の「シーズン」を調べてから動くのがコツです。</p>
@@ -1727,7 +1768,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 
             <h2 id="fa-english">痛感した「語学力」の重要性</h2>
             <p>ファーム生活でいちばん実感したのが<strong>語学力の重要性</strong>です。</p>
-            <p>ファームの上司（スーパーバイザー）は<strong>ゴリゴリのオージー</strong>。都市部の人と比べて<strong>訛りが強く</strong>、指示を聞き取るだけでもひと苦労でした。仕事の現場では「英語の力が本当に求められる」と、より一層感じました。</p>
+            <p>ファームの上司（スーパーバイザー）は<strong>地元育ちのオージー</strong>。都市部の人と比べて<strong>訛りが強く</strong>、指示を聞き取るだけでもひと苦労でした。仕事の現場では「英語の力が本当に求められる」と、より一層感じました。</p>
             <p>バッパーでの生活も当然、英語中心。週末のパーティーやBBQも、<strong>英語が話せるほど何倍も楽しめます</strong>。逆に言えば、英語に不安があると、仕事でも生活でも壁にぶつかりやすいということです。渡航前にできるだけ英語に触れておくことを、強くおすすめします。</p>
 
             <h2 id="fa-agent">不安なら「ワーホリエージェント」の活用も</h2>
@@ -1735,8 +1776,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <div style="background:var(--orange-p);border:1px solid var(--br);border-radius:var(--r-lg);padding:24px;margin:28px 0;text-align:center;">
               <p style="font-weight:700;margin-bottom:8px;">🌏 まずは無料相談から</p>
               <p style="font-size:14px;color:var(--t2);margin-bottom:16px;line-height:1.8;">無料で相談できるワーホリエージェントも多数。ファーム探し・英語準備・ビザ手続きまで、まとめてサポートしてもらえます。</p>
-              <!-- TODO: ワーホリエージェントのアフィリエイトリンクに差し替え -->
-              <a class="btn btn-p" href="#" rel="sponsored noopener" style="cursor:pointer;">ワーホリエージェントを探す →</a>
+              <!-- ボタンは提携確定後に設置予定（アフィリエイト未確定のため一旦非表示）-->
             </div>
 
             <h2 id="fa-faq">よくある質問</h2>
@@ -1961,7 +2001,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                   <tr><th><a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">TORA eSIM</a></th><td>480円〜※</td><td>世界中</td><td>0.5GB〜無制限</td><td>◯</td></tr>
                   <tr><th><a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZU29" target="_blank" rel="sponsored nofollow noopener">trifa（トリファ）</a></th><td>790円〜※</td><td>200ヵ国</td><td>アプリ完結・周遊向き</td><td>◎ 24時間</td></tr>
                   <tr><th><a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623817&p_id=5941&pc_id=16548&pl_id=75903" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">eSIM-san</a></th><td>458円〜※</td><td>200ヵ国以上</td><td>1日単位・周遊あり</td><td>◎ LINE可</td></tr>
-                  <tr><th><a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">Nomad SIM</a></th><td>3,520円〜※</td><td>約85ヵ国(eSIM)</td><td>国内大容量＋海外</td><td>◯</td></tr>
+                  <tr><th><a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">Nomad SIM</a></th><td>3,520円〜※</td><td>85ヵ国以上(eSIM)</td><td>国内大容量＋海外</td><td>◯</td></tr>
                 </tbody>
               </table>
             </div>
@@ -2070,7 +2110,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                 <table class="esim-specs">
                   <tr><th>料金の目安</th><td>国内50GB 3,520円〜</td></tr>
                   <tr><th>プラン</th><td>国内SIM 50GB／100GB・海外eSIM</td></tr>
-                  <tr><th>対応エリア</th><td>eSIMは世界約85ヵ国</td></tr>
+                  <tr><th>対応エリア</th><td>eSIMは世界85ヵ国以上</td></tr>
                   <tr><th>期間</th><td>30日間／単日プランから選べる</td></tr>
                   <tr><th>契約縛り</th><td>なし・解約金ゼロ</td></tr>
                   <tr><th>受け取り</th><td>QRコードを読み込むだけ（eSIM）</td></tr>
@@ -2216,8 +2256,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <div style="background:var(--orange-p);border:1px solid var(--br);border-radius:var(--r-lg);padding:24px;margin:28px 0;text-align:center;">
               <p style="font-weight:700;margin-bottom:8px;">🌏 仕事探し・英語準備が不安なら</p>
               <p style="font-size:14px;color:var(--t2);margin-bottom:16px;line-height:1.8;">ワーホリエージェントなら、仕事情報の紹介や出発前の英語・手続きサポートが受けられます。無料相談できるところも多数。</p>
-              <!-- TODO: ワーホリエージェントのアフィリエイトリンクに差し替え -->
-              <a class="btn btn-p" href="#" rel="sponsored noopener" style="cursor:pointer;">ワーホリエージェントを探す →</a>
+              <!-- ボタンは提携確定後に設置予定（アフィリエイト未確定のため一旦非表示）-->
             </div>
 
             <h2 id="jb-faq">よくある質問</h2>
@@ -3018,6 +3057,24 @@ function updateSEOMeta(name, filter) {
 }
 function openMobMenu(){ document.getElementById('mob-menu').classList.add('open'); document.body.style.overflow='hidden'; }
 function closeMobMenu(){ document.getElementById('mob-menu').classList.remove('open'); document.body.style.overflow=''; }
+
+// スマホ用：各記事の目次をリード文の後（最初のh2の前）に複製表示する
+(function(){
+  document.querySelectorAll('.art-layout').forEach(function(layout){
+    var body = layout.querySelector('.art-body');
+    var sidebar = layout.querySelector('.sidebar');
+    if(!body || !sidebar) return;
+    var toc = sidebar.querySelector('.sw');
+    if(!toc || !toc.querySelector('.toc-list')) return;
+    if(body.querySelector('.toc-mobile')) return;
+    toc.classList.add('sw-toc-orig');
+    var clone = toc.cloneNode(true);
+    clone.classList.remove('sw-toc-orig');
+    clone.classList.add('toc-mobile');
+    var firstH2 = body.querySelector('h2');
+    if(firstH2){ body.insertBefore(clone, firstH2); } else { body.appendChild(clone); }
+  });
+})();
 
 // 初期ロード時にURLを解析（SEO_META・CAT_SEO定義後に実行する必要があるためスクリプト末尾で呼び出す）
 (function(){
