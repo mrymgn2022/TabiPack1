@@ -229,6 +229,27 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 .aff-pts{margin-bottom:18px}
 .aff-pts li{font-size:13px;color:var(--t2);padding:3px 0 3px 18px;position:relative;list-style:none}
 .aff-pts li::before{content:'✓';position:absolute;left:0;color:var(--orange);font-weight:700}
+/* eSIM比較カード */
+.cmp-wrap{overflow-x:auto;margin:18px 0}
+.cmp-table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border:1px solid var(--br);border-radius:12px;overflow:hidden;min-width:520px}
+.cmp-table th,.cmp-table td{padding:10px 8px;border-bottom:1px solid var(--br);text-align:center}
+.cmp-table thead th{background:var(--black);color:#fff;font-weight:700;font-size:12.5px}
+.cmp-table tbody th{background:var(--surf2);color:var(--t1);font-weight:700;text-align:left;white-space:nowrap}
+.cmp-table tbody tr:last-child td,.cmp-table tbody tr:last-child th{border-bottom:none}
+.esim-card{background:#fff;border:1px solid var(--br);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.06);margin:24px 0}
+.esim-card-banner{text-align:center;background:var(--surf2);padding:20px}
+.esim-card-banner img{max-width:100%;height:auto;border-radius:8px}
+.esim-card-body{padding:24px}
+.esim-card-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--orange);background:var(--orange-p);padding:3px 11px;border-radius:999px;margin-bottom:12px}
+.esim-card-name{font-size:21px;font-weight:800;color:var(--t1);margin:0 0 14px}
+.esim-specs{width:100%;border-collapse:collapse;margin-bottom:18px}
+.esim-specs th,.esim-specs td{text-align:left;font-size:13.5px;padding:9px 10px;border-bottom:1px solid var(--br)}
+.esim-specs th{color:var(--t2);font-weight:600;width:40%;background:var(--surf2);vertical-align:top}
+.esim-specs tr:last-child th,.esim-specs tr:last-child td{border-bottom:none}
+.esim-btn{display:block;text-align:center;background:var(--orange);color:#fff!important;font-weight:700;padding:15px;border-radius:10px;text-decoration:none;font-size:15px}
+.esim-btn:hover{opacity:.92}
+.esim-link{color:var(--orange);font-weight:700;text-decoration:none;cursor:pointer;transition:color .2s ease,text-shadow .2s ease}
+.esim-link:hover{color:var(--orange-l);text-shadow:0 0 7px rgba(242,100,25,.55);text-decoration:underline}
 .aff-btn{width:100%;background:var(--orange);color:#fff;border:none;border-radius:99px;padding:13px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s}
 .aff-btn:hover{background:var(--orange-d)}
 
@@ -480,7 +501,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
             <div class="art-thumb tg" style="background:none;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop&q=80" alt="eSIM・スマホ" style="width:100%;height:100%;object-fit:cover;"></div>
             <div class="art-body">
               <div class="art-tags"><span class="tag tt">旅行</span><span class="tag tw">ワーホリ</span></div>
-              <div class="art-title">eSIM・海外SIMの選び方｜到着即ネットを最安で</div>
+              <div class="art-title">海外旅行のeSIM徹底比較｜おすすめ5社を比較</div>
               <div class="art-foot"><span>2026年6月6日</span><span class="art-rm">読む →</span></div>
             </div>
           </div>
@@ -559,7 +580,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           <ul class="footer-links">
             <li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li>
             <li><a onclick="showPage('wise')">Wiseの使い方</a></li>
-            <li><a onclick="showPage('esim')">eSIMの選び方</a></li>
+            <li><a onclick="showPage('esim')">eSIM徹底比較</a></li>
           </ul>
         </div>
         <div>
@@ -697,8 +718,8 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           <div class="art-thumb tg" style="background:none;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&auto=format&fit=crop&q=80" alt="eSIM・スマホ" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="art-body">
             <div class="art-tags"><span class="tag tt">旅行</span><span class="tag tw">ワーホリ</span></div>
-            <div class="art-title">eSIM・海外SIMの選び方｜到着即ネットを最安で</div>
-            <div class="art-exc">eSIMの仕組み・選び方・設定手順・おすすめサービスを渡航準備向けに解説。</div>
+            <div class="art-title">海外旅行のeSIM徹底比較｜おすすめ5社を比較</div>
+            <div class="art-exc">海外旅行向けeSIMのメリット・選び方と、おすすめ5社（TORA・trifa・eSIM-san 他）を徹底比較。</div>
             <div class="art-foot"><span>2026年6月6日</span><span class="art-rm">読む →</span></div>
           </div>
         </div>
@@ -728,7 +749,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           <p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p>
         </div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
-        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('esim')">eSIMの選び方</a></li></ul></div>
+        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('esim')">eSIM徹底比較</a></li></ul></div>
         <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
       <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-sns"><a href="https://www.instagram.com/tabi.pack/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://x.com/Tabi_Pack" target="_blank" rel="noopener" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a></div><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
@@ -803,7 +824,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                 <li>デビットカード付き・海外決済手数料も安い</li>
                 <li>口座開設無料・日本からオンラインで完了</li>
               </ul>
-              <button class="aff-btn">Wise（ワイズ）の公式サイトへ →</button>
+              <a class="aff-btn" href="https://wise.com/jp/" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none;">Wise（ワイズ）の公式サイトへ →</a>
             </div>
 
             <h2 id="esim">渡航前に準備②：eSIM（TORA eSIM）</h2>
@@ -887,7 +908,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
       <div class="footer-grid">
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
-        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('esim')">eSIMの選び方</a></li></ul></div>
+        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('esim')">eSIM徹底比較</a></li></ul></div>
         <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
       <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-sns"><a href="https://www.instagram.com/tabi.pack/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://x.com/Tabi_Pack" target="_blank" rel="noopener" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a></div><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
@@ -993,7 +1014,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
       <div class="footer-grid">
         <div><div class="footer-logo" onclick="showPage('top')"><div class="logo-icon">✈</div>Tabi<span style="color:var(--orange-l)">Pack</span></div><p class="footer-desc">ワーキングホリデー・海外旅行・国内旅行に役立つ情報を実体験をもとに発信しています。</p></div>
         <div><p class="footer-col-title">カテゴリ</p><ul class="footer-links"><li><a onclick="showPage('category','workholi')">ワーホリ</a></li><li><a onclick="showPage('category','travel')">旅行</a></li><li><a onclick="showPage('category','gadget')">ガジェット</a></li><li><a onclick="showPage('category','money')">お金・決済</a></li></ul></div>
-        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('esim')">eSIMの選び方</a></li></ul></div>
+        <div><p class="footer-col-title">人気記事</p><ul class="footer-links"><li><a onclick="showPage('article')">ワーホリビザ申請手順</a></li><li><a onclick="showPage('wise')">Wiseの使い方</a></li><li><a onclick="showPage('esim')">eSIM徹底比較</a></li></ul></div>
         <div><p class="footer-col-title">サイト情報</p><ul class="footer-links"><li><a onclick="showPage('about')">編集者について</a></li><li><a onclick="showPage('privacy')">プライバシーポリシー</a></li><li><a onclick="showPage('disclaimer')">免責事項</a></li><li><a onclick="showPage('contact')">お問い合わせ</a></li></ul></div>
       </div>
       <div class="footer-bottom"><span>© 2026 TabiPack. All rights reserved.</span><div class="footer-sns"><a href="https://www.instagram.com/tabi.pack/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="https://x.com/Tabi_Pack" target="_blank" rel="noopener" aria-label="X" title="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a></div><div class="footer-bl"><a onclick="showPage('privacy')">プライバシーポリシー</a><a onclick="showPage('disclaimer')">免責事項</a><a onclick="showPage('contact')">お問い合わせ</a></div></div>
@@ -1052,7 +1073,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                 <li>多通貨口座で現地通貨を保有できる</li>
                 <li>カード発行・口座開設無料</li>
               </ul>
-              <button class="aff-btn">Wise 公式サイトへ →</button>
+              <a class="aff-btn" href="https://wise.com/jp/" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none;">Wise 公式サイトへ →</a>
             </div>
 
             <h2 id="g3">03. モバイルバッテリー（20,000mAh以上）</h2>
@@ -1294,7 +1315,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
                 <li>デビットカード発行で海外ATM・店舗でも使える</li>
                 <li>口座開設無料・日本からオンラインで完了</li>
               </ul>
-              <button class="aff-btn">Wise（ワイズ）の公式サイトへ →</button>
+              <a class="aff-btn" href="https://wise.com/jp/" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none;">Wise（ワイズ）の公式サイトへ →</a>
             </div>
 
             <h2 id="w-faq">よくある質問</h2>
@@ -1821,7 +1842,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
 
             <h2 id="tp-prep">旅の準備</h2>
             <p>快適な旅には、現地で<strong>すぐ使えるネット環境（eSIM）</strong>、手数料の安い<strong>支払い・送金（Wise）</strong>、そして万一に備える<strong>海外旅行保険</strong>が欠かせません。出発前に準備しておきましょう。</p>
-            <p>👉 関連：<span class="link" style="color:var(--orange);cursor:pointer;" onclick="showPage('esim')">eSIM・海外SIMの選び方</span> ／ <span class="link" style="color:var(--orange);cursor:pointer;" onclick="showPage('wise')">Wiseの使い方</span></p>
+            <p>👉 関連：<span class="link" style="color:var(--orange);cursor:pointer;" onclick="showPage('esim')">海外旅行のeSIM徹底比較</span> ／ <span class="link" style="color:var(--orange);cursor:pointer;" onclick="showPage('wise')">Wiseの使い方</span></p>
             <!-- trifaバナー：タレント素材は2026/6/30まで・画像改変不可 -->
             <div style="text-align:center;margin:28px 0;">
               <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZMCH" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="海外eSIMアプリ trifa（トリファ）" src="https://www20.a8.net/svt/bgt?aid=260606737456&wid=001&eno=01&mid=s00000027266001006000&mc=1" style="max-width:100%;height:auto;"></a>
@@ -1857,7 +1878,7 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           </div>
           <div class="sw">
             <div class="sw-head">関連記事</div>
-            <div class="rel-item" onclick="showPage('esim')" style="cursor:pointer;"><div class="rel-thumb" style="background:none;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=112&h=112&fit=crop&q=70" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div><div><div class="rel-title">eSIM・海外SIMの選び方</div><div class="rel-date">2026年6月6日</div></div></div>
+            <div class="rel-item" onclick="showPage('esim')" style="cursor:pointer;"><div class="rel-thumb" style="background:none;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=112&h=112&fit=crop&q=70" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div><div><div class="rel-title">海外旅行のeSIM徹底比較</div><div class="rel-date">2026年6月6日</div></div></div>
             <div class="rel-item" onclick="showPage('gadget')" style="cursor:pointer;"><div class="rel-thumb" style="background:none;padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=112&h=112&fit=crop&q=70" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div><div><div class="rel-title">ガジェット10選【実体験レビュー】</div><div class="rel-date">2026年6月3日</div></div></div>
           </div>
           <div style="background:var(--orange);border-radius:var(--r-lg);padding:22px;">
@@ -1883,14 +1904,14 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
   </footer>
 </div>
 
-<!-- ======== eSIM・海外SIMの選び方 ======== -->
+<!-- ======== 海外旅行のeSIM徹底比較 ======== -->
 <div class="page" id="page-esim">
   <main class="art-page">
     <div class="container">
       <div class="breadcrumb">
         <span class="link" onclick="showPage('top')">ホーム</span><span>›</span>
-        <span class="link" onclick="showPage('category','gadget')">ガジェット</span><span>›</span>
-        <span>eSIM・海外SIMの選び方</span>
+        <span class="link" onclick="showPage('category','travel')">旅行</span><span>›</span>
+        <span>海外旅行のeSIM徹底比較</span>
       </div>
       <div class="art-layout">
         <article>
@@ -1899,55 +1920,174 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           </div>
           <div class="art-header-tags">
             <span class="tag tt">旅行</span>
-            <span class="tag tw">ワーホリ</span>
           </div>
-          <h1 class="art-h1">eSIM・海外SIMの選び方｜オーストラリア・ワーホリのネット環境を最安で【2026年版】</h1>
+          <h1 class="art-h1">海外旅行に適したeSIM徹底比較｜旅行者向けおすすめ5社【2026年版】</h1>
           <div class="art-meta">
-            <span>📅 2026年6月6日</span><span>🕐 約6分</span><span>✏️ TabiPack編集部</span>
+            <span>📅 2026年6月7日</span><span>🕐 約9分</span><span>✏️ TabiPack編集部</span>
           </div>
           <div class="art-body">
             <p style="font-size:12px;color:var(--tm);background:var(--surf2);border-radius:var(--r-sm);padding:8px 12px;">※本記事はプロモーション（アフィリエイト広告）を含みます。</p>
-            <p>海外でのネット環境は、到着直後の連絡・地図・配車・仕事探しにも必須。今は<strong>eSIM</strong>を使えば、空港に着いた瞬間からスマホがネットにつながります。この記事では、ワーホリ・旅行に向けたeSIMと海外SIMの選び方を、実体験をもとに解説します。</p>
+            <p>海外旅行で意外と困るのが「現地のネット環境」。到着後の地図・翻訳・配車・連絡など、スマホがつながらないと旅のあらゆる場面で足止めされてしまいます。そこで便利なのが<strong>eSIM（イーシム）</strong>。出発前にスマホで購入・設定しておくだけで、<strong>現地に着いた瞬間からネットが使えます</strong>。この記事では、海外旅行者向けにeSIMが便利な理由と、おすすめサービス5社を徹底比較します。</p>
 
-            <h2 id="es-what">eSIMとは？</h2>
-            <p>eSIM（イーシム）は、スマホ本体に内蔵されたチップに通信プランを<strong>オンラインで書き込んで使う「デジタルSIM」</strong>です。物理的なSIMカードの差し替えが不要で、出発前にアプリで購入・設定しておけば、<strong>現地到着後すぐに通信できます</strong>。</p>
-
-            <h2 id="es-why">eSIMが便利な理由</h2>
+            <h2 id="es-why">海外旅行でeSIMが便利な理由</h2>
             <ul>
-              <li><strong>到着即ネット</strong>：現地のSIMカウンターに並ばなくてよい</li>
-              <li><strong>差し替え不要</strong>：日本の番号（物理SIM）を残したまま、データ用にeSIMを追加できる</li>
-              <li><strong>無くさない</strong>：小さな物理SIMを紛失する心配がない</li>
-              <li><strong>料金が明朗</strong>：必要な容量・期間を事前に選べる</li>
+              <li><strong>空港に着いた瞬間からネットにつながる</strong>：現地のSIMカウンターに並ぶ必要がなく、到着後すぐに地図・配車アプリ・連絡が使えます。</li>
+              <li><strong>言語に不安があっても安心</strong>：到着直後から翻訳アプリが使えるので、入国後の移動や買い物・案内表示の確認でも、言葉の壁を越えやすくなります。</li>
+              <li><strong>空港でSIMを買うより割安になりやすい</strong>：現地空港で売られているSIMやレンタルWi-Fiは割高なことが多く、出発前にeSIMを用意しておくほうがお得なケースが多いです。</li>
+              <li><strong>トランジット（乗り継ぎ）でも快適</strong>：乗り継ぎ国にも対応したeSIMを持っておけば、空港での長い待ち時間もネットにつないで快適に過ごせます。</li>
+              <li><strong>物理SIMの差し替え不要・紛失しない</strong>：日本の番号（物理SIM）を残したまま、データ用にeSIMを追加できます（デュアルSIM）。小さなSIMを失くす心配もありません。</li>
+              <li><strong>料金が明朗</strong>：必要なデータ容量・期間を事前に選べるので、使いすぎる心配がありません。</li>
             </ul>
 
-            <h2 id="es-choose">選び方のポイント</h2>
+            <h2 id="es-what">そもそもeSIMとは？</h2>
+            <p>eSIM（イーシム）は、スマホ本体に内蔵されたチップに通信プランを<strong>オンラインで書き込んで使う「デジタルSIM」</strong>です。物理的なSIMカードの差し替えが不要で、多くは<strong>QRコードを読み込むだけ</strong>で設定が完了します。出発前に準備しておけば、現地到着後すぐに通信が可能。なお、iPhone XS以降や最近のAndroidなど<strong>eSIM対応スマホ</strong>が必要なので、購入前に手持ちの端末が対応しているか確認しておきましょう。</p>
+
+            <h2 id="es-choose">旅行者向け・eSIMの選び方</h2>
             <ul>
-              <li><strong>対応端末か</strong>：eSIM対応スマホが必要（iPhone XS以降・最近のAndroid等）。事前に確認を</li>
-              <li><strong>データ容量</strong>：長期滞在なら大容量や無制限プラン、短期旅行なら数GBでも十分</li>
-              <li><strong>期間</strong>：旅行（数日〜2週間）かワーホリ（数ヶ月）かで選ぶ</li>
-              <li><strong>現地番号の要否</strong>：仕事探しで電話番号が要る場合は、通話付き現地SIMも検討</li>
+              <li><strong>対応エリア</strong>：渡航先（＋乗り継ぎ国）が対応しているか。複数国を回るなら「周遊プラン」が便利です。</li>
+              <li><strong>データ容量</strong>：地図・SNS中心なら数GB、動画もよく見るなら大容量や無制限が安心。</li>
+              <li><strong>期間</strong>：旅行日数に合わせて、単日〜30日などから選びます。</li>
+              <li><strong>料金と支払い方法</strong>：日本円決済か、PayPay・コンビニ決済など使いやすい方法があるか。</li>
+              <li><strong>サポート</strong>：初めてなら、日本語サポートがあると安心です。</li>
             </ul>
 
-            <h2 id="es-rec">おすすめサービス：trifa（トリファ）</h2>
-            <p>筆者が使ってみて便利だったのが、スマホアプリで完結する海外eSIM <strong>trifa（トリファ）</strong>です。物理SIMの差し替えや、WiFiルーターのレンタル・返却の手間がなく、渡航準備がぐっとラクになります。</p>
-            <!-- trifaバナー：タレント素材は2026/6/30まで・画像改変不可 -->
-            <div style="text-align:center;margin:24px 0;">
-              <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZMCH" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="海外eSIMアプリ trifa（トリファ）" src="https://www20.a8.net/svt/bgt?aid=260606737456&wid=001&eno=01&mid=s00000027266001006000&mc=1" style="max-width:100%;height:auto;"></a>
-              <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B5PG1+7JHOMQ+5UDW+5ZMCH" alt="">
+            <h2 id="es-table">eSIMおすすめ5社・早見比較表</h2>
+            <p>今回比較するのは、海外旅行で使いやすいeSIMサービス5社です。まずは早見表で全体像を確認しましょう。</p>
+            <div class="cmp-wrap">
+              <table class="cmp-table">
+                <thead><tr><th>サービス</th><th>料金の目安</th><th>対応エリア</th><th>データプラン</th><th>日本語サポート</th></tr></thead>
+                <tbody>
+                  <tr><th><a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5Q80+F171O2+5HZI+5ZEMP" target="_blank" rel="sponsored nofollow noopener">JAPAN&amp;GLOBAL eSIM</a></th><td>250円〜</td><td>190ヵ国以上</td><td>容量・日数を自由選択</td><td>◎ 24時間</td></tr>
+                  <tr><th><a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">TORA eSIM</a></th><td>480円〜※</td><td>世界中</td><td>0.5GB〜無制限</td><td>◯</td></tr>
+                  <tr><th><a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZU29" target="_blank" rel="sponsored nofollow noopener">trifa（トリファ）</a></th><td>790円〜※</td><td>200ヵ国</td><td>アプリ完結・周遊向き</td><td>◎ 24時間</td></tr>
+                  <tr><th><a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623817&p_id=5941&pc_id=16548&pl_id=75903" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">eSIM-san</a></th><td>458円〜※</td><td>200ヵ国以上</td><td>1日単位・周遊あり</td><td>◎ LINE可</td></tr>
+                  <tr><th><a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">Nomad SIM</a></th><td>3,520円〜※</td><td>約85ヵ国(eSIM)</td><td>国内大容量＋海外</td><td>◯</td></tr>
+                </tbody>
+              </table>
             </div>
-            <ul>
-              <li>アプリで購入から設定・利用開始までスマホだけで完結（現地に着いてからでも準備できる）</li>
-              <li>対応エリアが広く、複数の国を周遊するときも1つのアプリで使いやすい</li>
-              <li>日本語でのサポートがあり、eSIMが初めてでも安心して使える</li>
-              <li>テザリング（PC・タブレットへの通信共有）に対応</li>
-            </ul>
-            <p>レンタルWiFiのように「重い・充電が必要・返却がある」といった手間がなく、周遊旅行やワーホリの長期滞在とも相性が良いです。現地のWiFiが不安定なときの<strong>バックアップ</strong>として入れておくのもおすすめです。</p>
-            <div style="background:var(--orange-p);border:1px solid var(--br);border-radius:var(--r-lg);padding:24px;margin:28px 0;text-align:center;">
-              <p style="font-weight:700;margin-bottom:8px;">📲 海外eSIMアプリ「trifa（トリファ）」</p>
-              <p style="font-size:14px;color:var(--t2);margin-bottom:16px;line-height:1.8;">出発前にアプリで購入・設定しておけば、到着後すぐにネットが使えます。物理SIMの差し替えもWiFiレンタルも不要で、周遊にも便利です。</p>
-              <a class="btn btn-p" href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+609HT" target="_blank" rel="sponsored nofollow noopener" style="cursor:pointer;">trifa（トリファ）を見る →</a>
-              <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B5PG1+7JHOMQ+5UDW+609HT" alt="">
+            <p style="font-size:12px;color:var(--tm);">※料金は各社の最安プランの一例で、国・データ容量・時期により変動します（Nomad SIMは国内50GBプランの料金）。最新の料金・対応国は各公式サイトでご確認ください。</p>
+
+            <h2 id="es-list">各サービスの詳細比較</h2>
+
+            <!-- ① JAPAN&GLOBAL eSIM -->
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B5Q80+F171O2+5HZI+5ZEMP" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="JAPAN&amp;GLOBAL eSIM" src="https://www25.a8.net/svt/bgt?aid=260607744909&wid=001&eno=01&mid=s00000025659001005000&mc=1" loading="lazy" style="max-width:100%;height:auto;"></a>
+                <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B5Q80+F171O2+5HZI+5ZEMP" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">まず試したい人に</span>
+                <p class="esim-card-name">JAPAN&amp;GLOBAL eSIM</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>250円〜（使い切り型）</td></tr>
+                  <tr><th>対応エリア</th><td>190ヵ国・地域以上</td></tr>
+                  <tr><th>データ／期間</th><td>容量・利用日数を自由に選べる</td></tr>
+                  <tr><th>受け取り</th><td>QRコードを読み込むだけ</td></tr>
+                  <tr><th>支払い</th><td>クレカ・PayPay（日本円決済）</td></tr>
+                  <tr><th>サポート</th><td>日本語・英語・中国語 24時間365日</td></tr>
+                  <tr><th>こんな人に</th><td>初めてのeSIM／幅広い国に行く人</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">日本企業が運営。使い切りタイプなので追加料金や解約の心配がなく、250円からお試しできるので初めてでも始めやすいのが魅力です。海外で購入しても日本円決済なので、為替変動を気にせず使えます。</p>
+                <a class="esim-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5Q80+F171O2+5HZI+5ZEMP" target="_blank" rel="sponsored nofollow noopener">JAPAN&amp;GLOBAL eSIM 公式サイトを見る →</a>
+              </div>
             </div>
+
+            <!-- ② TORA eSIM -->
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="TORA eSIM" src="https://www29.a8.net/svt/bgt?aid=260606739151&wid=001&eno=01&mid=s00000026367001004000&mc=1" loading="lazy" style="max-width:100%;height:auto;"></a>
+                <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">短期〜長期まで対応</span>
+                <p class="esim-card-name">TORA eSIM</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>480円〜（隠れコストなし）</td></tr>
+                  <tr><th>対応エリア</th><td>世界中の地域</td></tr>
+                  <tr><th>データ容量</th><td>0.5GB〜無制限</td></tr>
+                  <tr><th>受け取り</th><td>出発前にオンライン購入→到着後すぐ</td></tr>
+                  <tr><th>こんな人に</th><td>短期旅行〜長期滞在まで幅広く</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">現地SIMカードやポケットWi-Fiが不要で、出発前にオンラインで購入しておけば到着後すぐに使えます。0.5GBから無制限まで幅広いプランがあり、短期旅行から長期滞在まで対応。料金が明確で隠れたコストがないのも安心です。</p>
+                <a class="esim-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">TORA eSIM 公式サイトを見る →</a>
+              </div>
+            </div>
+
+            <!-- ③ trifa（トリファ）：タレント素材は2026/6/30まで・画像改変不可 -->
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZU29" target="_blank" rel="sponsored nofollow noopener"><img border="0" width="300" height="250" alt="海外eSIMアプリ trifa（トリファ）" src="https://www24.a8.net/svt/bgt?aid=260606737456&wid=001&eno=01&mid=s00000027266001007000&mc=1" loading="lazy" style="max-width:100%;height:auto;"></a>
+                <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B5PG1+7JHOMQ+5UDW+5ZU29" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">周遊・アプリ派に</span>
+                <p class="esim-card-name">trifa（トリファ）</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>790円〜</td></tr>
+                  <tr><th>接続</th><td>アプリで購入〜接続まで完結（最短1分）</td></tr>
+                  <tr><th>対応エリア</th><td>世界200ヵ国</td></tr>
+                  <tr><th>サポート</th><td>日本語チャット 24時間</td></tr>
+                  <tr><th>テザリング</th><td>対応（PC・タブレット共有可）</td></tr>
+                  <tr><th>こんな人に</th><td>複数国を周遊する人／アプリで完結したい人</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">物理SIMの差し替えや、重いレンタルWi-Fiの持ち歩きが不要。アプリだけで購入から接続まで完結し、1つのアプリで世界200ヵ国に対応するので、複数国を周遊する旅行と相性が良いです。テザリングにも対応し、現地Wi-Fiが不安定なときのバックアップとしてもおすすめです。</p>
+                <a class="esim-btn" href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZU29" target="_blank" rel="sponsored nofollow noopener">trifa（トリファ）公式サイトを見る →</a>
+              </div>
+            </div>
+
+            <!-- ④ eSIM-san（イーシムさん） -->
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="//af.moshimo.com/af/c/click?a_id=5623817&p_id=5941&pc_id=16548&pl_id=75903" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/5687/000000075903.jpg" width="300" height="250" alt="eSIM-san（イーシムさん）" loading="lazy" style="max-width:100%;height:auto;border:none;"></a>
+                <img src="//i.moshimo.com/af/i/impression?a_id=5623817&p_id=5941&pc_id=16548&pl_id=75903" width="1" height="1" style="border:none;" loading="lazy" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">とにかく安く抑えたい人に</span>
+                <p class="esim-card-name">eSIM-san（イーシムさん）</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>低価格を打ち出す（例：韓国3日間458円〜）</td></tr>
+                  <tr><th>対応エリア</th><td>200ヵ国以上</td></tr>
+                  <tr><th>データプラン</th><td>500MB/日〜無制限/日・周遊プランあり</td></tr>
+                  <tr><th>開通</th><td>オンライン申込で即日（10分前後）</td></tr>
+                  <tr><th>支払い</th><td>クレカ・コンビニ決済など</td></tr>
+                  <tr><th>サポート</th><td>日本人スタッフ（メール・公式LINE）</td></tr>
+                  <tr><th>こんな人に</th><td>料金を重視する人／短い日数で使う人</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">1日単位のデータプランや周遊プランなど、きめ細かい料金設定が特徴。コンビニ決済にも対応し、申込から開通までが早いのも魅力です。（料金は国・プラン・時期により変動します）</p>
+                <a class="esim-btn" href="//af.moshimo.com/af/c/click?a_id=5623817&p_id=5941&pc_id=16548&pl_id=75903" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">eSIM-san（イーシムさん）公式サイトを見る →</a>
+              </div>
+            </div>
+
+            <!-- ⑤ Nomad SIM -->
+            <div class="esim-card">
+              <div class="esim-card-banner">
+                <a href="//af.moshimo.com/af/c/click?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/1682/000000031906.jpg" width="300" height="250" alt="Nomad SIM" loading="lazy" style="max-width:100%;height:auto;border:none;"></a>
+                <img src="//i.moshimo.com/af/i/impression?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" width="1" height="1" style="border:none;" loading="lazy" alt="">
+              </div>
+              <div class="esim-card-body">
+                <span class="esim-card-tag">国内・海外で使いたい人に</span>
+                <p class="esim-card-name">Nomad SIM</p>
+                <table class="esim-specs">
+                  <tr><th>料金の目安</th><td>国内50GB 3,520円〜</td></tr>
+                  <tr><th>プラン</th><td>国内SIM 50GB／100GB・海外eSIM</td></tr>
+                  <tr><th>対応エリア</th><td>eSIMは世界約85ヵ国</td></tr>
+                  <tr><th>期間</th><td>30日間／単日プランから選べる</td></tr>
+                  <tr><th>契約縛り</th><td>なし・解約金ゼロ</td></tr>
+                  <tr><th>受け取り</th><td>QRコードを読み込むだけ（eSIM）</td></tr>
+                  <tr><th>こんな人に</th><td>国内外で使いたい人／大容量を使う人</td></tr>
+                </table>
+                <p style="font-size:13.5px;color:var(--t2);margin-bottom:18px;">国内向けの大容量SIM（50GB／100GB）と、海外で使えるeSIMプランの両方を提供。契約期間の縛りや解約金がなく、メインでもサブでも使いやすいのが特徴です。</p>
+                <a class="esim-btn" href="//af.moshimo.com/af/c/click?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">Nomad SIM 公式サイトを見る →</a>
+              </div>
+            </div>
+
+            <h2 id="es-pick">用途別・どれを選ぶ？</h2>
+            <ul>
+              <li><strong>初めて・まず試したい</strong> → 250円から試せる<a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5Q80+F171O2+5HZI+5ZEMP" target="_blank" rel="sponsored nofollow noopener">「JAPAN&amp;GLOBAL eSIM」</a></li>
+              <li><strong>とにかく安く抑えたい</strong> → 低価格プランの<a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623817&p_id=5941&pc_id=16548&pl_id=75903" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">「eSIM-san」</a></li>
+              <li><strong>複数国を周遊する</strong> → 1アプリで完結する<a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG1+7JHOMQ+5UDW+5ZU29" target="_blank" rel="sponsored nofollow noopener">「trifa」</a>・<a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">「TORA eSIM」</a></li>
+              <li><strong>長期滞在・大容量で使いたい</strong> → 無制限プランのある<a class="esim-link" href="https://px.a8.net/svt/ejp?a8mat=4B5PG3+2HWH4I+5NG6+5Z6WX" target="_blank" rel="sponsored nofollow noopener">「TORA eSIM」</a>、国内外で使う<a class="esim-link" href="//af.moshimo.com/af/c/click?a_id=5623818&p_id=2448&pc_id=5368&pl_id=31906" target="_blank" rel="sponsored nofollow noopener" referrerpolicy="no-referrer-when-downgrade">「Nomad SIM」</a></li>
+            </ul>
 
             <h2 id="es-setup">設定の手順</h2>
             <div class="step-box"><div class="step-num">1</div><div><p class="step-ttl">対応端末を確認</p><p class="step-desc">スマホがeSIM対応か確認します（設定画面やメーカー情報でチェック）。</p></div></div>
@@ -1973,10 +2113,12 @@ a{text-decoration:none;color:inherit}ul,ol{list-style:none}
           <div class="sw">
             <div class="sw-head">目次</div>
             <ul class="toc-list">
-              <li><a onclick="scrollToId('es-what')">eSIMとは？</a></li>
               <li><a onclick="scrollToId('es-why')">便利な理由</a></li>
+              <li><a onclick="scrollToId('es-what')">eSIMとは？</a></li>
               <li><a onclick="scrollToId('es-choose')">選び方</a></li>
-              <li><a onclick="scrollToId('es-rec')">おすすめ</a></li>
+              <li><a onclick="scrollToId('es-table')">早見比較表</a></li>
+              <li><a onclick="scrollToId('es-list')">各サービス詳細</a></li>
+              <li><a onclick="scrollToId('es-pick')">用途別の選び方</a></li>
               <li><a onclick="scrollToId('es-setup')">設定の手順</a></li>
               <li><a onclick="scrollToId('es-faq')">よくある質問</a></li>
             </ul>
@@ -2353,7 +2495,7 @@ var PAGE_TITLES = {
   'super':   'オーストラリアのスーパーアニュエーション完全ガイド｜ワーホリが帰国後に年金を引き出す方法【2026年版】｜TabiPack',
   'farm':    'オーストラリアのファームジョブ体験談｜バナナファームでセカンドビザ取得【ワーホリ】｜TabiPack',
   'trip':    'オーストラリア周遊モデルコース｜シドニー・ケアンズ・メルボルンの観光と回り方｜TabiPack',
-  'esim':    'eSIM・海外SIMの選び方｜オーストラリア・ワーホリのネット環境を最安で【2026年版】｜TabiPack',
+  'esim':    '海外旅行に適したeSIM徹底比較｜旅行者向けおすすめ5社【2026年版】｜TabiPack',
   'job':     'オーストラリアでの仕事の探し方｜ワーホリのジョブ探し・レジュメ・面接【2026年版】｜TabiPack',
   'about':   '編集者について｜TabiPack',
   'privacy':  'プライバシーポリシー｜TabiPack',
@@ -2735,22 +2877,22 @@ var SEO_META = {
     }
   },
   'esim': {
-    title: 'eSIM・海外SIMの選び方｜オーストラリア・ワーホリのネット環境を最安で【2026年版】｜TabiPack',
-    desc:  'eSIM・海外SIMの選び方を解説。eSIMの仕組み・メリット・容量や対応端末の選び方・設定手順・おすすめサービスまで、オーストラリアのワーホリ/旅行向けに紹介。',
+    title: '海外旅行に適したeSIM徹底比較｜旅行者向けおすすめ5社【2026年版】｜TabiPack',
+    desc:  '海外旅行向けのeSIMを徹底比較。空港到着後すぐにネット・翻訳が使えるメリットや選び方、JAPAN&GLOBAL eSIM・TORA eSIM・trifa・eSIM-san・Nomad SIMのおすすめ5社を比較します。',
     url:   'https://tabipack.com/articles/esim-guide',
     type:  'article',
     ld: {
       "@context": "https://schema.org", "@type": "Article",
-      "headline": "eSIM・海外SIMの選び方｜オーストラリア・ワーホリのネット環境を最安で【2026年版】",
-      "description": "eSIMの仕組み・メリット・選び方・設定手順・おすすめサービスをワーホリ/旅行向けに紹介。",
-      "datePublished": "2026-06-06", "dateModified": "2026-06-06",
+      "headline": "海外旅行に適したeSIM徹底比較｜旅行者向けおすすめ5社【2026年版】",
+      "description": "海外旅行向けeSIMの選び方とおすすめ5社（JAPAN&GLOBAL eSIM・TORA eSIM・trifa・eSIM-san・Nomad SIM）を徹底比較。",
+      "datePublished": "2026-06-06", "dateModified": "2026-06-07",
       "author": {"@type": "Person", "name": "TabiPack編集者", "url": "https://tabipack.com/about"},
       "publisher": {"@type": "Organization", "name": "TabiPack", "url": "https://tabipack.com/"},
       "mainEntityOfPage": "https://tabipack.com/articles/esim-guide",
       "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://tabipack.com/"},
-        {"@type": "ListItem", "position": 2, "name": "ガジェット", "item": "https://tabipack.com/category/gadget"},
-        {"@type": "ListItem", "position": 3, "name": "eSIM・海外SIMの選び方", "item": "https://tabipack.com/articles/esim-guide"}
+        {"@type": "ListItem", "position": 2, "name": "旅行", "item": "https://tabipack.com/category/travel"},
+        {"@type": "ListItem", "position": 3, "name": "海外旅行のeSIM徹底比較", "item": "https://tabipack.com/articles/esim-guide"}
       ]}
     }
   },
