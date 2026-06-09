@@ -3685,5 +3685,36 @@ function closeMobMenu(){ document.getElementById('mob-menu').classList.remove('o
   }
 })();
 </script>
+<script>
+/* ===== MailerLite「新着記事を受け取る」フォーム接続 ===== */
+(function(){
+  var ACTION = 'https://assets.mailerlite.com/jsonp/2418629/forms/189762645012776211/subscribe';
+  var ifr = document.createElement('iframe');
+  ifr.name = 'ml_sub_iframe'; ifr.setAttribute('aria-hidden','true');
+  ifr.style.cssText = 'position:absolute;width:0;height:0;border:0;left:-9999px;';
+  document.body.appendChild(ifr);
+  function valid(e){ return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e); }
+  document.querySelectorAll('input[type="email"][placeholder="メールアドレス"]').forEach(function(input){
+    var box = input.parentNode;
+    var btn = box.querySelector('button');
+    if(!btn) return;
+    var note = document.createElement('p');
+    note.style.cssText = 'font-size:10px;color:rgba(255,255,255,.7);margin:6px 0 0;line-height:1.5;';
+    note.textContent = '※配信はいつでも解除できます';
+    box.appendChild(note);
+    btn.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var email = (input.value || '').trim();
+      if(!valid(email)){ input.focus(); input.style.boxShadow = '0 0 0 2px #ffd54f'; return; }
+      var f = document.createElement('form');
+      f.action = ACTION; f.method = 'post'; f.target = 'ml_sub_iframe'; f.style.display = 'none';
+      function add(n,v){ var i = document.createElement('input'); i.type = 'hidden'; i.name = n; i.value = v; f.appendChild(i); }
+      add('fields[email]', email); add('ml-submit','1'); add('anticsrf','true');
+      document.body.appendChild(f); f.submit(); setTimeout(function(){ f.remove(); }, 1500);
+      box.innerHTML = '<p style="font-size:14px;font-weight:700;color:white;margin:0 0 6px;">✅ 登録ありがとうございます！</p><p style="font-size:12px;color:rgba(255,255,255,.85);margin:0;line-height:1.6;">新着記事が出たらメールでお知らせします。</p>';
+    });
+  });
+})();
+</script>
 </body>
 </html>
