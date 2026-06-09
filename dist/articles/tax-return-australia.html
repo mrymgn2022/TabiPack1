@@ -56,8 +56,10 @@
           {"@type": "ListItem", "position": 3, "name": "オーストラリアのタックスリターン攻略", "item": "https://tabipack.com/articles/tax-return-australia"}
         ]
       }
-    }</script>
+    }</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"タックスリターンは必ずやる必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"給料から税金が天引きされている人は、基本的に申告が必要です。多くの場合は払いすぎた税金が還付されるため、やらないと損になりがちです。"}},{"@type":"Question","name":"帰国後でも申告できますか？","acceptedAnswer":{"@type":"Answer","text":"できます。myGov／ATOオンライン、または登録税理士を通じて海外からでも申告可能です。還付金はWiseなどのAUD口座でも受け取れます。"}},{"@type":"Question","name":"スーパーアニュエーション（年金）も戻ってきますか？","acceptedAnswer":{"@type":"Answer","text":"ワーホリなどの一時滞在者は、出国後にDASP（Departing Australia Superannuation Payment）として年金を請求できます。ただしワーホリのDASP税率は65%と高めで、タックスリターンとは別の手続きになります。詳しくはスーパーアニュエーションの解説記事をご覧ください。"}},{"@type":"Question","name":"自分でやるのと税理士に頼むのはどちらが良いですか？","acceptedAnswer":{"@type":"Answer","text":"シンプルな内容ならmyTaxで自分でも十分可能です。居住者判定や控除に不安がある場合は、登録税理士（registered tax agent）に依頼すると安心です（手数料は翌年の控除対象になることもあります）。"}}]}</script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -105,7 +107,7 @@
       <div class="art-layout">
         <article>
           <div class="art-hero-img" style="width:100%;height:280px;border-radius:var(--r-lg);overflow:hidden;margin-bottom:20px;">
-            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&auto=format&fit=crop&q=80" alt="オーストラリアのタックスリターン（確定申告）のイメージ" style="width:100%;height:100%;object-fit:cover;">
+            <img fetchpriority="high" decoding="async" width="1100" height="280" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&auto=format&fit=crop&q=80" alt="オーストラリアのタックスリターン（確定申告）のイメージ" style="width:100%;height:100%;object-fit:cover;">
           </div>
           <div class="art-header-tags">
             <span class="tag tm">お金・決済</span>
@@ -137,7 +139,7 @@
             <p>登録税理士（registered tax agent）に依頼する場合は<strong>期限が翌年まで延長</strong>されることがあります。ただし、10月31日までに税理士へ登録・依頼しておく必要があります。</p>
 
             <h2 id="tr-whm">ワーホリの税率（Working Holiday Maker rates）</h2>
-            <p>ワーキングホリデービザ（subclass 417／462）で働く人には、原則「ワーホリ向け税率」が適用されます。日本の基礎控除のような非課税枠がなく、<strong>1ドル目から15%</strong>かかるのが特徴です。</p>
+            <p><a class="link" style="color:var(--orange);cursor:pointer;" href="/articles/workholi-visa-australia">ワーキングホリデービザ</a>（subclass 417／462）で働く人には、原則「ワーホリ向け税率」が適用されます。日本の基礎控除のような非課税枠がなく、<strong>1ドル目から15%</strong>かかるのが特徴です。</p>
             <table>
               <thead><tr><th>課税所得（AUD）</th><th>税率</th></tr></thead>
               <tbody>
