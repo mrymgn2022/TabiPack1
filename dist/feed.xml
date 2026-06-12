@@ -6,8 +6,15 @@
   <atom:link href="https://tabipack.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>ワーキングホリデー・海外旅行・ガジェット・お金（海外送金）の準備情報を、2年間のオーストラリアワーホリ実体験をもとに発信するメディアです。</description>
   <language>ja</language>
-  <lastBuildDate>Tue, 09 Jun 2026 19:00:00 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 12 Jun 2026 19:00:00 +0900</lastBuildDate>
 
+  <item>
+    <title>オーストラリアのRSA取得ガイド｜受験料・英語講習・州ごとの違い・お酒と運転まで</title>
+    <link>https://tabipack.com/articles/rsa-australia</link>
+    <guid>https://tabipack.com/articles/rsa-australia</guid>
+    <pubDate>Fri, 12 Jun 2026 19:00:00 +0900</pubDate>
+    <description>お酒を扱う仕事に必須のRSA（責任あるアルコール提供）を解説。受験料の州別目安・英語講習の注意点・州をまたぐと取り直しになる仕組み・予約方法、飲酒運転のBAC0.05ルールまで紹介。</description>
+  </item>
   <item>
     <title>【NSW・シドニー版】日本の免許の翻訳と書き換え方法</title>
     <link>https://tabipack.com/articles/driving-licence-nsw</link>
